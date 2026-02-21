@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Egypt - Discover Ancient Wonders</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <a href="tel:+201234567890" class="top-bar-link">
+                        <span class="top-bar-icon">📞</span>
+                        <span>+20 123 456 7890</span>
+                    </a>
+                    <a href="mailto:info@travelegypt.com" class="top-bar-link">
+                        <span class="top-bar-icon">✉️</span>
+                        <span>info@travelegypt.com</span>
+                    </a>
+                </div>
+                <div class="top-bar-right top-bar-social">
+                    <a href="#" class="top-bar-social-link" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="top-bar-social-link" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="top-bar-social-link" aria-label="Twitter" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="top-bar-social-link" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a  href="#home" class="logo text-white">LOGO</a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#packages" class="nav-link">Packages</a></li>
+                    <li><a href="#cruises" class="nav-link">Nile Cruises</a></li>
+                    <li><a href="#redsea" class="nav-link">Red Sea</a></li>
+                    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                </ul>
+                <a href="#packages" class="nav-cta-btn">Book Your Trip</a>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home/Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-image">
+            <!-- ضع صورتك في assets/hero-bg.png أو اترك الرابط الحالي -->
+            <img src="assets/hero-bg.png" alt="Egypt Pyramids" loading="eager" class="hero-bg-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=90';">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-darkening-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title scroll-animate" data-animation="fadeInUp" data-delay="0">
+                        Discover <span class="highlight">Egypt's Magic</span>
+                    </h1>
+                    <p class="hero-subtitle scroll-animate" data-animation="fadeInUp" data-delay="200">
+                        Luxury, tailor-made journeys to explore the wonders of ancient and modern Egypt.
+                    </p>
+                    <div class="hero-buttons scroll-animate" data-animation="fadeInUp" data-delay="400">
+                        <a href="#packages" class="btn btn-primary">Start Planning</a>
+                        <a href="#packages" class="btn btn-secondary">Browse Packages</a>
+                    </div>
+                    <div class="hero-features scroll-animate" data-animation="fadeInUp" data-delay="600">
+                        <div class="feature-item">
+                            <div class="feature-icon">🧭</div>
+                            <span class="feature-text">Custom Trips</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⭐</div>
+                            <span class="feature-text">5-Star Service</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🛡️</div>
+                            <span class="feature-text">Best Price Guarantee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Featured Packages Section -->
+    <section class="featured-packages" id="packages">
+        <div class="container">
+            <!-- Header Section -->
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="star-icon">✦</span>
+                    <span>OUR FEATURED PACKAGES</span>
+                    <span class="star-icon">✦</span>
+                </div>
+                <h2 class="section-title">
+                    Choose Your Next <span class="highlight">Adventure</span>
+                </h2>
+                <p class="section-description">
+                    Carefully curated travel experiences designed to show you the very best of Egypt's wonders.
+                </p>
+            </div>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper packages-carousel">
+                <div class="swiper-wrapper">
+                    <!-- Package Card 1 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Aswan Nubian Culture" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>ASWAN</span>
+                                </div>
+                                <div class="category-badge">CULTURAL</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$280</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.9</span>
+                                    <span class="reviews">(91 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Aswan: Nubian Culture Experience</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>3 Days</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>All Welcome</span>
+                                    </div>
+                                </div>
+                                <button class="explore-btn">EXPLORE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 2 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Pyramids Cairo" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>GIZA, CAIRO</span>
+                                </div>
+                                <div class="category-badge">HISTORICAL</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$299</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.9</span>
+                                    <span class="reviews">(124 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Classic Pyramids & Cairo Highlights</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>3 Days</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>2-10 People</span>
+                                    </div>
+                                </div>
+                                <button class="explore-btn">EXPLORE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 3 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Nile Cruise" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>NILE RIVER</span>
+                                </div>
+                                <div class="category-badge">CRUISES</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$599</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.8</span>
+                                    <span class="reviews">(85 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Luxury Nile Cruise: Luxor to Aswan</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>5 Days</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👨‍👩‍👧‍👦</span>
+                                        <span>Family Friendly</span>
+                                    </div>
+                                </div>
+                                <button class="explore-btn">EXPLORE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 4 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Red Sea Diving" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>RED SEA</span>
+                                </div>
+                                <div class="category-badge">AQUATIC</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$350</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.9</span>
+                                    <span class="reviews">(67 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Red Sea Snorkel & Scuba Diving</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>1 Day</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>All Ages</span>
+                                    </div>
+                                </div>
+                                <button class="explore-btn">EXPLORE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 5 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Alexandria Mediterranean" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>ALEXANDRIA</span>
+                                </div>
+                                <div class="category-badge">CULTURAL</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$199</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.9</span>
+                                    <span class="reviews">(43 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Alexandria Port Said Mediterranean</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>3 Days</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>All Welcome</span>
+                                    </div>
+                                </div>
+                                <button class="explore-btn">EXPLORE DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Royal Nile Cruises Section -->
+    <section class="nile-cruises-section" id="cruises">
+        <div class="container">
+            <div class="cruises-wrapper">
+                <!-- Left Column - Image -->
+                <div class="cruises-image-col scroll-animate" data-animation="fadeInLeft">
+                    <div class="cruises-image-container">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=90" alt="Nile River Cruise" class="cruises-main-image">
+                        <div class="cruises-badge">
+                            <span class="badge-icon">⚓</span>
+                            <div class="badge-text">
+                                <strong>15+</strong>
+                                <span>Luxury Ships</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Content -->
+                <div class="cruises-content-col scroll-animate" data-animation="fadeInRight">
+                    <div class="cruises-subheading">
+                        <span class="star-icon">✦</span>
+                        <span>Luxury Experience</span>
+                    </div>
+                    <h2 class="cruises-title">
+                        Royal Nile River <span class="highlight">Cruises</span>
+                    </h2>
+                    <p class="cruises-description">
+                        Enjoy a magical journey aboard the most luxurious Nile ships, where ultimate comfort meets the magic of Pharaonic history. From Luxor to Aswan, witness the greatest temples and monuments while enjoying top-notch services.
+                    </p>
+
+                    <!-- Feature Cards Grid -->
+                    <div class="cruises-features-grid">
+                        <div class="feature-card scroll-animate" data-animation="fadeInUp" data-delay="100">
+                            <div class="feature-card-icon">🛏️</div>
+                            <div class="feature-card-content">
+                                <h4 class="feature-card-title">Luxury Rooms</h4>
+                                <p class="feature-card-subtitle">Nile View</p>
+                            </div>
+                        </div>
+                        <div class="feature-card scroll-animate" data-animation="fadeInUp" data-delay="200">
+                            <div class="feature-card-icon">🍽️</div>
+                            <div class="feature-card-content">
+                                <h4 class="feature-card-title">World Cuisine</h4>
+                                <p class="feature-card-subtitle">Gourmet Dining</p>
+                            </div>
+                        </div>
+                        <div class="feature-card scroll-animate" data-animation="fadeInUp" data-delay="300">
+                            <div class="feature-card-icon">☕</div>
+                            <div class="feature-card-content">
+                                <h4 class="feature-card-title">Panoramic Bar</h4>
+                                <p class="feature-card-subtitle">Signature Drinks</p>
+                            </div>
+                        </div>
+                        <div class="feature-card scroll-animate" data-animation="fadeInUp" data-delay="400">
+                            <div class="feature-card-icon">📷</div>
+                            <div class="feature-card-content">
+                                <h4 class="feature-card-title">Guided Tours</h4>
+                                <p class="feature-card-subtitle">Expert Guides</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="cruises-cta-buttons scroll-animate" data-animation="fadeInUp" data-delay="500">
+                        <a href="#packages" class="btn btn-primary">Book Your Nile Cruise</a>
+                        <a href="#packages" class="btn btn-outline">Browse Ships</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">✈️</span>
+                        <span class="logo-text">Travel Egypt</span>
+                    </div>
+                    <p class="footer-description">
+                        We offer you the best travel experiences in Egypt with trips designed to discover the wonders of ancient and modern Egypt.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Historical Tours</a></li>
+                        <li><a href="#">Nile Cruises</a></li>
+                        <li><a href="#">Family Trips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            <span>Cairo, Egypt</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            <span>+20 123 456 7890</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">✉️</span>
+                            <span>info@travelegypt.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Travel Egypt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
