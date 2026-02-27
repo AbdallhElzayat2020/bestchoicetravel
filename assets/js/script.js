@@ -288,7 +288,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Scroll Animation Observer - Powerful animations on scroll
+// Scroll Animation Observer - AOS-like animations on every scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -296,16 +296,17 @@ const observerOptions = {
 
 const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+        const element = entry.target;
+        const delay = Number(element.dataset.delay || 0);
+
         if (entry.isIntersecting) {
-            const element = entry.target;
-            const delay = element.dataset.delay || 0;
-            
+            // Trigger animation when element enters viewport
             setTimeout(() => {
                 element.classList.add('animate');
             }, delay);
-            
-            // Stop observing once animated
-            scrollObserver.unobserve(element);
+        } else {
+            // Reset when element leaves viewport so it can animate again
+            element.classList.remove('animate');
         }
     });
 }, observerOptions);
@@ -340,18 +341,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 700);
 });
 
-// Enhanced scroll animations for sections
+// Enhanced scroll animations for sections (also repeat on re-enter)
 const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+        const section = entry.target;
+        const children = section.querySelectorAll('.scroll-animate');
+
         if (entry.isIntersecting) {
-            entry.target.classList.add('section-visible');
-            
-            // Animate children elements
-            const children = entry.target.querySelectorAll('.scroll-animate');
+            section.classList.add('section-visible');
+
+            // Animate child elements with small stagger
             children.forEach((child, index) => {
                 setTimeout(() => {
                     child.classList.add('animate');
                 }, index * 100);
+            });
+        } else {
+            // Reset section + children when leaving viewport
+            section.classList.remove('section-visible');
+            children.forEach(child => {
+                child.classList.remove('animate');
             });
         }
     });
