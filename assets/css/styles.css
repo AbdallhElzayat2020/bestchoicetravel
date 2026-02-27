@@ -1238,7 +1238,7 @@ html {
 
 /* Red Sea Experience Section */
 .redsea-section {
-    background-image: url('assets/red-sea.jpg');
+    background-image: url('../red-sea.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
