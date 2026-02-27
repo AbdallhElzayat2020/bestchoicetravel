@@ -273,7 +273,7 @@ html {
 }
 
 .brand-logo-img {
-    height: 95px;
+    height: 75px;
     width: auto;
 }
 
@@ -355,16 +355,18 @@ html {
     }
 }
 
-/* Active nav link: just underline */
+/* Active nav link: small blue pill around tab */
 .navbar-nav .nav-link.active {
-    background-color: transparent;
-    color: var(--primary-color) !important;
-    box-shadow: none;
+    background-color: var(--brand-blue);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(43, 83, 167, 0.25);
+    border-radius: 999px;
+    padding-inline: 18px;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
-    transform: scaleX(1);
+    transform: scaleX(0); /* لا نحتاج الخط مع البيل */
 }
 
 .nav-cta-btn {
