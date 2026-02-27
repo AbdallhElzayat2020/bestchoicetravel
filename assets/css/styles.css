@@ -87,8 +87,8 @@ html {
 .scroll-progress-bar {
     width: 0;
     height: 100%;
-    background: var(--brand-yellow);
-    box-shadow: 0 0 8px rgba(248, 230, 0, 0.7);
+    background: var(--brand-blue-light);
+    box-shadow: 0 0 8px var(--brand-blue-light);
     transition: width 0.15s ease-out;
 }
 
@@ -154,7 +154,7 @@ html {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--brand-yellow);
+    color: var(--brand-blue-light);
 }
 
 .nav-link.active::after {
@@ -261,7 +261,7 @@ html {
 
 /* Bootstrap navbar theming */
 .navbar.bg-body-tertiary {
-    background-color: #000 !important;
+    background-color: rgba(248, 249, 250, 0.96) !important;
     box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
     z-index: 1030 !important;
 }
@@ -278,7 +278,7 @@ html {
 }
 
 .navbar.bg-body-tertiary .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #1f2937;
     font-weight: 500;
     padding: 0.75rem 1rem;
     transition: color 0.2s ease;
@@ -288,26 +288,13 @@ html {
 .navbar.bg-body-tertiary .navbar-nav .nav-link:hover,
 .navbar.bg-body-tertiary .navbar-nav .nav-link:focus,
 .navbar.bg-body-tertiary .navbar-nav .nav-link.active {
-    color: var(--brand-yellow);
+    color: var(--brand-blue-dark);
 }
 
 .main-navbar .navbar-nav .nav-link:hover,
 .main-navbar .navbar-nav .nav-link:focus,
 .main-navbar .navbar-nav .nav-link.active {
-    color: var(--brand-yellow);
-}
-
-.main-navbar.scrolled {
-    background-color: #000000c5 !important;
-}
-
-.main-navbar.scrolled .navbar-brand,
-.main-navbar.scrolled .navbar-nav .nav-link {
-    color: #ffffff !important;
-}
-
-.main-navbar.scrolled .navbar-nav .nav-link.active {
-    color: var(--brand-yellow) !important;
+    color: var(--brand-blue-dark);
 }
 
 .nav-menu {
@@ -333,7 +320,7 @@ html {
     right: 0;
     left: 0;
     height: 2px;
-    background: var(--brand-yellow);
+    background: var(--brand-blue-light);
     transform: scaleX(0);
     transition: transform 0.25s ease;
     border-radius: 2px;
@@ -651,7 +638,7 @@ html {
 .main-navbar .btn-primary {
     padding: 10px 24px;
     font-size: 14px;
-    border-radius: 999px;
+    border-radius: 10px;
 }
 
 .btn-primary {
@@ -1781,7 +1768,7 @@ html {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: var(--primary-color);
+    background: #C47A2C;
     transform: translate(-50%, -50%);
     transition: width 0.4s ease, height 0.4s ease;
     z-index: -1;
@@ -2056,6 +2043,7 @@ html {
     .packages-carousel .swiper-button-prev {
         width: 40px;
         height: 40px;
+        top: 32%;
     }
 
     .packages-carousel .swiper-button-next:after,
@@ -2156,8 +2144,11 @@ html {
 
 /* Desert Safari Section */
 .desert-section {
-    background: radial-gradient(circle at top left, #111827 0%, #020617 55%, #020617 100%);
-    color: #f9fafb;
+    /* Desert Luxury Palette */
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.85) 0%, rgba(245, 230, 211, 0.95) 45%),
+        linear-gradient(135deg, #ffffff 0%, #F5E6D3 35%, #EAD5B8 80%);
+    color: #444444;
     padding: 80px 0;
 }
 
@@ -2216,7 +2207,7 @@ html {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--brand-yellow);
+    color: #D4A017; /* highlight */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -2227,8 +2218,8 @@ html {
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    background: var(--brand-yellow);
-    box-shadow: 0 0 0 6px rgba(248, 230, 0, 0.2);
+    background: #D4A017;
+    box-shadow: 0 0 0 6px rgba(212, 160, 23, 0.18);
 }
 
 .desert-title {
@@ -2236,15 +2227,16 @@ html {
     font-weight: 800;
     letter-spacing: -0.04em;
     margin-bottom: 14px;
+    color: #2B2B2B; /* heading */
 }
 
 .desert-title-highlight {
-    color: var(--brand-yellow);
+    color: #D4A017;
 }
 
 .desert-description {
     font-size: 15px;
-    color: rgba(209, 213, 219, 0.95);
+    color: #444444;
     line-height: 1.8;
     margin-bottom: 22px;
 }
@@ -2277,12 +2269,38 @@ html {
 .desert-feature-title {
     font-size: 15px;
     font-weight: 600;
-    color: #f9fafb;
+    color: #2B2B2B;
 }
 
 .desert-feature-subtitle {
     font-size: 13px;
-    color: rgba(156, 163, 175, 0.96);
+    color: #666666;
+}
+
+/* Desert-specific buttons using Desert Luxury Palette */
+.desert-section .btn-primary {
+    background: #C47A2C;
+    border-color: #C47A2C;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(196, 122, 44, 0.45);
+}
+
+.desert-section .btn-primary:hover {
+    background: #A8641F; /* Hover from palette */
+    border-color: #A8641F;
+    box-shadow: 0 12px 34px rgba(168, 100, 31, 0.55);
+    transform: translateY(-2px);
+}
+
+.desert-section .desert-cta-secondary.btn.btn-outline {
+    border-color: #C47A2C;
+    color: #C47A2C;
+}
+
+.desert-section .desert-cta-secondary.btn.btn-outline:hover {
+    background: #C47A2C;
+    color: #ffffff;
+    box-shadow: 0 10px 26px rgba(196, 122, 44, 0.4);
 }
 
 .desert-cta {
