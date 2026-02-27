@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Egypt - Classic Pyramids Tour</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
+        integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top main-navbar">
+        <div class="container px-lg-1">
+            <a class="navbar-brand logo d-flex align-items-center gap-2" href="index.html#home">
+                <img src="assets/logo.png" alt="Logo" class="brand-logo-img" height="70" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tour.html">Tour Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#packages">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="navbar-social d-flex align-items-center gap-2">
+                            <a href="#" class="navbar-social-link" aria-label="Facebook"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="navbar-social-link" aria-label="Instagram"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="navbar-social-link" aria-label="X (Twitter)"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </li>
+                    <li class="nav-item mt-3 mt-lg-0">
+                        <a class="btn btn-primary px-4" href="#booking">Book This Tour</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating actions (WhatsApp + Scroll to top) -->
+    <div class="floating-actions">
+        <a href="https://wa.me/201234567890" target="_blank" rel="noopener"
+            class="floating-btn floating-btn--whatsapp" id="whatsappBtn" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button type="button" class="floating-btn floating-btn--scrolltop" id="scrollTopBtn"
+            aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Tour Hero + Gallery + Booking -->
+    <main class="tour-page">
+        <section class="tour-hero section-padding">
+            <div class="container">
+                <div class="tour-breadcrumb scroll-animate" data-animation="fadeInUp">
+                    <a href="index.html#home">Home</a>
+                    <span>/</span>
+                    <a href="index.html#packages">Packages</a>
+                    <span>/</span>
+                    <span>Classic Pyramids &amp; Cairo Highlights</span>
+                </div>
+
+                <div class="tour-hero-header row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="tour-title scroll-animate" data-animation="fadeInUp" data-delay="50">
+                            Classic Pyramids &amp; Cairo Highlights
+                        </h1>
+                        <div class="tour-meta scroll-animate" data-animation="fadeInUp" data-delay="150">
+                            <div class="tour-meta-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Giza &amp; Cairo, Egypt</span>
+                            </div>
+                            <div class="tour-meta-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>3 Days / 2 Nights</span>
+                            </div>
+                            <div class="tour-meta-item">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <span>4.9 (124 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-main-layout row g-4">
+                    <!-- Gallery + short description -->
+                    <div class="col-lg-8">
+                        <div class="tour-gallery scroll-animate" data-animation="fadeInUp" data-delay="250">
+                            <div class="row g-3 align-items-stretch">
+                                <div class="col-md-8">
+                                    <div class="swiper tour-gallery-main">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/hero-bg.png" alt="Pyramids and desert" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/hero-bg.png" alt="Red Sea coastline" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/hero-bg.png" alt="Egyptian desert safari" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/logo.png" alt="Travel Egypt brand" />
+                                            </div>
+                                        </div>
+                                        <div class="tour-gallery-main-nav">
+                                            <div class="tour-gallery-prev"></div>
+                                            <div class="tour-gallery-next"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="swiper tour-gallery-thumbs">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/hero-bg.png" alt="Egyptian desert safari" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/hero-bg.png" alt="Egyptian desert safari" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/hero-bg.png" alt="Egyptian desert safari" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/hero-bg.png" alt="Egyptian desert safari" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text description under gallery -->
+                        <div class="tour-intro-text scroll-animate mt-4" data-animation="fadeInUp" data-delay="350">
+                            <h2>About this experience</h2>
+                            <p>
+                                Spend three unforgettable days between the ancient wonders of the Giza Plateau and the
+                                vibrant streets of modern Cairo. This curated itinerary combines must‑see highlights
+                                with carefully chosen moments to slow down, enjoy the view, and connect with Egypt’s
+                                culture, food, and people.
+                            </p>
+                            <p>
+                                Perfect for first‑time visitors and returning travellers who want a seamless,
+                                well‑organized introduction to Cairo with expert local support from the moment you
+                                arrive.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Booking card -->
+                    <div class="col-lg-4">
+                        <aside class="tour-booking-card scroll-animate" id="booking" data-animation="fadeInUp"
+                            data-delay="300">
+                            <div class="tour-booking-price-strip">
+                                <span class="tour-booking-from">From</span>
+                                <span class="tour-booking-old">$2,250</span>
+                                <span class="tour-booking-new">$1,950</span>
+                                <span class="tour-booking-per">per person</span>
+                            </div>
+                            <form class="tour-booking-form">
+                                <div class="mb-2">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Full name" />
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" placeholder="you@example.com" />
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" placeholder="+20 123 456 7890" />
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Nationality</label>
+                                    <input type="text" class="form-control" placeholder="e.g. Egyptian, Italian" />
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">No. of Travellers</label>
+                                    <input type="number" class="form-control" min="1" value="1" />
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">Extra Options</label>
+                                    <div class="tour-extras-list">
+                                        <label class="form-check">
+                                            <input class="form-check-input" type="checkbox" />
+                                            <span class="form-check-label">2 Days Cairo City tour ($600)</span>
+                                        </label>
+                                        <label class="form-check">
+                                            <input class="form-check-input" type="checkbox" />
+                                            <span class="form-check-label">Alexandria Day Tour ($350)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tour-booking-summary">
+                                    <div class="tour-booking-row tour-booking-total">
+                                        <span>Total:</span>
+                                        <span>$1,950</span>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 mt-2">
+                                    Booking Now
+                                </button>
+                            </form>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Itinerary & Details -->
+        <section class="tour-details section-padding">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <div class="tour-expect-card">
+                            <h2 class="tour-expect-title">What To Expect</h2>
+
+                            <div class="tour-day">
+                                <div class="tour-day-number">1</div>
+                                <div class="tour-day-body">
+                                    <h3 class="tour-day-title">Welcome to Cairo &amp; Giza</h3>
+                                    <p>
+                                        Arrival in Cairo and transfer to your hotel. In the afternoon, head to the
+                                        Giza Plateau for your first breathtaking view of the Great Pyramids and the
+                                        Sphinx, followed by a sunset photo stop in the desert.
+                                    </p>
+                                    <ul>
+                                        <li>Airport meet &amp; greet and private transfer</li>
+                                        <li>Guided visit to the Pyramids &amp; Sphinx</li>
+                                        <li>Welcome dinner overlooking the city</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tour-day">
+                                <div class="tour-day-number">2</div>
+                                <div class="tour-day-body">
+                                    <h3 class="tour-day-title">Egyptian Museum &amp; Old Cairo</h3>
+                                    <p>
+                                        Dive deeper into Egypt’s history at the Egyptian Museum, then wander through
+                                        the lanes of Old Cairo and Khan El‑Khalili bazaar with time for coffee,
+                                        souvenirs, and street photography.
+                                    </p>
+                                    <ul>
+                                        <li>Guided tour of key Museum highlights</li>
+                                        <li>Visit Old Cairo &amp; historic mosques</li>
+                                        <li>Optional evening Nile dinner cruise</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tour-day">
+                                <div class="tour-day-number">3</div>
+                                <div class="tour-day-body">
+                                    <h3 class="tour-day-title">Last Views &amp; Departure</h3>
+                                    <p>
+                                        Enjoy a relaxed breakfast and some final views of Cairo before your private
+                                        transfer to the airport, or extend your adventure with a Red Sea or Nile
+                                        cruise add‑on.
+                                    </p>
+                                    <ul>
+                                        <li>Breakfast at the hotel</li>
+                                        <li>Free time for last‑minute shopping</li>
+                                        <li>Private transfer to Cairo Airport</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="tour-facts-card">
+                            <h3>Tour Details</h3>
+                            <dl>
+                                <div class="tour-fact-row">
+                                    <dt>Category</dt>
+                                    <dd>City &amp; Culture</dd>
+                                </div>
+                                <div class="tour-fact-row">
+                                    <dt>Duration</dt>
+                                    <dd>3 Days / 2 Nights</dd>
+                                </div>
+                                <div class="tour-fact-row">
+                                    <dt>Departure</dt>
+                                    <dd>Daily from Cairo</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <!-- Testimonials Section -->
+        <section class="testimonials-section section-padding" id="testimonials">
+            <div class="container">
+                <div class="section-header scroll-animate" data-animation="fadeInUp">
+                    <div class="section-label">
+                        <span class="star-icon">✦</span>
+                        <span>Trusted by Travellers</span>
+                    </div>
+                    <h2 class="section-title">
+                        What Our <span class="highlight">Customers Say</span>
+                    </h2>
+                    <p class="section-description">
+                        We are proud of the trust of more than 50,000 travellers who chose us to design their dream trip
+                        to
+                        Egypt.
+                    </p>
+                </div>
+
+                <div class="swiper testimonials-carousel scroll-animate" data-animation="fadeInUp" data-delay="150">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Professional service, beautiful Nile views, and delicious food. The perfect holiday
+                                    for me
+                                    and my partner!"
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">E</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">Elena Rossi</div>
+                                        <div class="testimonial-location">Italy</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Diving in the Red Sea was life-changing. Highly recommend their adventure packages
+                                    for
+                                    anyone visiting Egypt."
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">J</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">John Smith</div>
+                                        <div class="testimonial-location">Canada</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Everything was perfectly organized from airport pick-up to private tours at the
+                                    pyramids.
+                                    Highly recommended!"
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">D</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">David Brown</div>
+                                        <div class="testimonial-location">UK</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Our family cruise on the Nile was unforgettable. The kids loved it and the guides
+                                    were
+                                    incredibly helpful."
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">A</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">Amira Khalil</div>
+                                        <div class="testimonial-location">UAE</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "As an Egyptian, I was impressed by how smooth everything was. Great service and
+                                    amazing
+                                    local knowledge."
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">Y</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">Youssef Mansour</div>
+                                        <div class="testimonial-location">Egypt</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 6 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "From the Red Sea to the desert, every part of our itinerary felt carefully designed
+                                    and
+                                    truly special."
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">S</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">Sophie Müller</div>
+                                        <div class="testimonial-location">Germany</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 7 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "The boutique hotels they chose for us in Cairo and Aswan were absolutely stunning
+                                    and very
+                                    comfortable."
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">M</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">Maria Lopez</div>
+                                        <div class="testimonial-location">Spain</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 8 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Our kids still talk about the Nile cruise and sound & light show at Karnak. Truly a
+                                    family
+                                    trip to remember."
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">K</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">Karen Wilson</div>
+                                        <div class="testimonial-location">USA</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 9 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Excellent communication from the team, flexible changes, and safe drivers
+                                    everywhere we
+                                    went."
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">L</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">Liam O'Connor</div>
+                                        <div class="testimonial-location">Ireland</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Testimonial 10 -->
+                        <div class="swiper-slide">
+                            <article class="testimonial-card">
+                                <div class="testimonial-top">
+                                    <div class="testimonial-rating">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="testimonial-quote-icon">
+                                        <i class="fa-solid fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Best agency we have ever booked with. They made Egypt feel both adventurous and
+                                    incredibly
+                                    easy."
+                                </p>
+                                <div class="testimonial-footer">
+                                    <div class="testimonial-avatar">N</div>
+                                    <div class="testimonial-meta">
+                                        <div class="testimonial-name">Nadia Karim</div>
+                                        <div class="testimonial-location">France</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination testimonials-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Tours -->
+        <section class="tour-related section-padding">
+            <div class="container">
+                <div class="section-header scroll-animate" data-animation="fadeInUp">
+                    <div class="section-label">
+                        <span class="star-icon">✦</span>
+                        <span>RELATED TOURS</span>
+                        <span class="star-icon">✦</span>
+                    </div>
+                    <h2 class="section-title">
+                        You May Also <span class="highlight">Like</span>
+                    </h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <a href="tour.html" class="related-tour-card">
+                            <div class="related-tour-image">
+                                <img src="assets/hero-bg.png" alt="Luxury Nile Cruise" />
+                            </div>
+                            <div class="related-tour-body">
+                                <div class="related-tour-header">
+                                    <span class="related-tour-category">Cruises</span>
+                                    <span class="related-tour-rating">4.9 ★</span>
+                                </div>
+                                <h3 class="related-tour-title">Luxury Nile Cruise: Luxor to Aswan</h3>
+                                <div class="related-tour-meta">
+                                    <span><i class="fa-regular fa-clock"></i> 5 Days</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Luxor · Aswan</span>
+                                </div>
+                                <div class="related-tour-price-row">
+                                    <span class="related-tour-price-label">From</span>
+                                    <span class="related-tour-price">$599</span>
+                                    <span class="related-tour-price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="tour.html" class="related-tour-card">
+                            <div class="related-tour-image">
+                                <img src="assets/hero-bg.png" alt="Luxury Nile Cruise" />
+                            </div>
+                            <div class="related-tour-body">
+                                <div class="related-tour-header">
+                                    <span class="related-tour-category">Cruises</span>
+                                    <span class="related-tour-rating">4.9 ★</span>
+                                </div>
+                                <h3 class="related-tour-title">Luxury Nile Cruise: Luxor to Aswan</h3>
+                                <div class="related-tour-meta">
+                                    <span><i class="fa-regular fa-clock"></i> 5 Days</span>
+                                    <span><i class="fa-solid fa-location-dot"></i> Luxor · Aswan</span>
+                                </div>
+                                <div class="related-tour-price-row">
+                                    <span class="related-tour-price-label">From</span>
+                                    <span class="related-tour-price">$599</span>
+                                    <span class="related-tour-price-unit">/ person</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tour Gallery Lightbox Modal -->
+    <div class="tour-lightbox-modal" id="tourLightbox" aria-hidden="true">
+        <div class="tour-lightbox-backdrop" id="tourLightboxBackdrop"></div>
+        <div class="tour-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="tourLightboxTitle">
+            <button class="tour-lightbox-close" id="tourLightboxClose" aria-label="Close gallery">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="tour-lightbox-content">
+                <img id="tourLightboxImage" src="" alt="Tour image preview">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (reuse) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="Travel Egypt" class="footer-logo-img" />
+                        <span class="logo-text">Travel Egypt</span>
+                    </div>
+                    <p class="footer-description">
+                        We offer you the best travel experiences in Egypt with trips
+                        designed to discover the wonders of ancient and modern Egypt.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="X (Twitter)"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#packages">Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#cruises">Nile Cruises</a></li>
+                        <li><a href="index.html#redsea">Red Sea &amp; Diving</a></li>
+                        <li><a href="index.html#packages">Desert &amp; Safari</a></li>
+                        <li><a href="#">Custom Packages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Cairo, Egypt</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span>+20 123 456 7890</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span>info@travelegypt.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Travel Egypt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

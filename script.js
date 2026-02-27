@@ -1,4 +1,4 @@
-// Initialize Swiper with 3D Coverflow Effect
+// Initialize Swiper with 3D Coverflow Effect (Packages)
 const swiper = new Swiper('.packages-carousel', {
     slidesPerView: 'auto',
     spaceBetween: 30,
@@ -55,6 +55,114 @@ const swiper = new Swiper('.packages-carousel', {
     },
 });
 
+// Testimonials Swiper
+if (document.querySelector('.testimonials-carousel')) {
+    // eslint-disable-next-line no-unused-vars
+    const testimonialsSwiper = new Swiper('.testimonials-carousel', {
+        slidesPerView: 1.1,
+        spaceBetween: 24,
+        centeredSlides: true,
+        loop: true,
+        speed: 700,
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.testimonials-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 1.4,
+            },
+            1024: {
+                slidesPerView: 2,
+            },
+        },
+    });
+}
+
+// Tour gallery Swipers (details page)
+let tourGallery = null;
+let tourThumbs = null;
+if (document.querySelector('.tour-gallery-main')) {
+    tourThumbs = new Swiper('.tour-gallery-thumbs', {
+        direction: 'vertical',
+        slidesPerView: 4,
+        spaceBetween: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    // eslint-disable-next-line no-unused-vars
+    tourGallery = new Swiper('.tour-gallery-main', {
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.tour-gallery-next',
+            prevEl: '.tour-gallery-prev',
+        },
+        thumbs: {
+            swiper: tourThumbs,
+        },
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tourGalleryMain = document.querySelector('.tour-gallery-main');
+    const tourLightbox = document.getElementById('tourLightbox');
+    const tourLightboxBackdrop = document.getElementById('tourLightboxBackdrop');
+    const tourLightboxClose = document.getElementById('tourLightboxClose');
+    const tourLightboxImage = document.getElementById('tourLightboxImage');
+
+    const openTourLightbox = (imgSrc, imgAlt) => {
+        if (!tourLightbox || !tourLightboxImage) return;
+        tourLightboxImage.src = imgSrc;
+        tourLightboxImage.alt = imgAlt || 'Tour image preview';
+        tourLightbox.classList.add('open');
+        document.body.classList.add('modal-open');
+    };
+
+    const closeTourLightbox = () => {
+        if (!tourLightbox) return;
+        tourLightbox.classList.remove('open');
+        document.body.classList.remove('modal-open');
+    };
+
+    if (tourGalleryMain) {
+        const mainSlides = document.querySelectorAll('.tour-gallery-main .swiper-slide img');
+        const thumbSlides = document.querySelectorAll('.tour-gallery-thumbs .swiper-slide img');
+
+        const attachOpenHandler = (images) => {
+            images.forEach((img) => {
+                img.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openTourLightbox(img.src, img.alt);
+                });
+            });
+        };
+
+        attachOpenHandler(mainSlides);
+        attachOpenHandler(thumbSlides);
+    }
+
+    if (tourLightboxBackdrop) {
+        tourLightboxBackdrop.addEventListener('click', closeTourLightbox);
+    }
+
+    if (tourLightboxClose) {
+        tourLightboxClose.addEventListener('click', closeTourLightbox);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && tourLightbox && tourLightbox.classList.contains('open')) {
+            closeTourLightbox();
+        }
+    });
+});
+
 // Add click handlers for explore buttons
 document.querySelectorAll('.explore-btn').forEach(button => {
     button.addEventListener('click', function() {
@@ -85,84 +193,58 @@ navLinks.forEach(link => {
     });
 });
 
-// Navbar scroll effect
+// Navbar scroll effect + scroll progress + floating buttons
 const navbar = document.querySelector('.navbar');
-const topBar = document.querySelector('.top-bar');
-let lastScroll = 0;
+const scrollProgressBar = document.getElementById('scrollProgressBar');
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+const whatsappBtn = document.getElementById('whatsappBtn');
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     const heroSection = document.querySelector('.hero-section');
-    const heroHeight = heroSection ? heroSection.offsetHeight : 0;
-    
-    // Navbar effects
-    if (currentScroll > 50) {
-        navbar.classList.add('scrolled');
-        if (topBar) topBar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.classList.remove('scrolled');
-        if (topBar) topBar.style.transform = 'translateY(0)';
+
+    // Navbar background/state
+    if (navbar) {
+        if (currentScroll > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     }
-    
-    // Hero section darkening and animation on scroll
-    if (heroSection && currentScroll > 0 && currentScroll < heroHeight) {
-        // Calculate scroll progress (0 to 1)
-        const scrollProgress = Math.min(currentScroll / (heroHeight * 0.5), 1);
-        
-        // Add scrolling class for CSS transitions
-        heroSection.classList.add('scrolling');
-        
-        // Dynamic darkening overlay
-        const darkeningOverlay = document.querySelector('.hero-darkening-overlay');
-        if (darkeningOverlay) {
-            const darkness = scrollProgress * 0.6; // Max 60% darkness
-            darkeningOverlay.style.background = `rgba(0, 0, 0, ${darkness})`;
-        }
-        
-        // Parallax effect for hero image
-        const heroImage = document.querySelector('.hero-bg-image');
-        if (heroImage) {
-            const parallaxSpeed = currentScroll * 0.5;
-            const scale = 1.1 - (scrollProgress * 0.1); // Scale down slightly
-            const blur = scrollProgress * 3; // Blur up to 3px
-            heroImage.style.transform = `scale(${scale}) translateY(${parallaxSpeed}px)`;
-            heroImage.style.filter = `brightness(${1 - scrollProgress * 0.4}) blur(${blur}px)`;
-        }
-        
-        // Fade out hero content
-        const heroContent = document.querySelector('.hero-content');
-        if (heroContent) {
-            const contentOpacity = 1 - (scrollProgress * 0.3); // Fade up to 30%
-            const translateY = scrollProgress * -30; // Move up
-            heroContent.style.opacity = contentOpacity;
-            heroContent.style.transform = `translateY(${translateY}px)`;
-        }
-        
-    } else if (heroSection && currentScroll === 0) {
-        // Reset when at top
-        heroSection.classList.remove('scrolling');
-        const darkeningOverlay = document.querySelector('.hero-darkening-overlay');
-        if (darkeningOverlay) {
-            darkeningOverlay.style.background = 'rgba(0, 0, 0, 0)';
-        }
+
+    // Scroll progress bar
+    if (scrollProgressBar) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (currentScroll / docHeight) * 100 : 0;
+        scrollProgressBar.style.width = `${Math.min(Math.max(progress, 0), 100)}%`;
+    }
+
+    // Show / hide floating buttons
+    const shouldShowFloating = currentScroll > 350;
+    if (scrollTopBtn) {
+        scrollTopBtn.classList.toggle('show', shouldShowFloating);
+    }
+    if (whatsappBtn) {
+        whatsappBtn.classList.toggle('show', shouldShowFloating);
+    }
+
+    // Hero section: keep image stable (no extra dark overlay now)
+    if (heroSection && currentScroll === 0) {
         const heroImage = document.querySelector('.hero-bg-image');
         if (heroImage) {
             heroImage.style.transform = 'scale(1.1) translateY(0)';
             heroImage.style.filter = 'brightness(1) blur(0)';
         }
-        const heroContent = document.querySelector('.hero-content');
-        if (heroContent) {
-            heroContent.style.opacity = '1';
-            heroContent.style.transform = 'translateY(0)';
-        }
     }
-    
-    lastScroll = currentScroll;
 });
 
-// Top bar transition
-if (topBar) {
-    topBar.style.transition = 'transform 0.3s ease';
+if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    });
 }
 
 // Active nav link on scroll
@@ -310,13 +392,13 @@ document.addEventListener('DOMContentLoaded', () => {
             img.classList.add('loaded');
         } else {
             // Wait for image to load
-            img.addEventListener('load', function() {
+            img.addEventListener('load', function handleLoad() {
                 this.classList.remove('img-loading');
                 this.classList.add('loaded');
             });
             
             // Handle image load errors with fallback
-            img.addEventListener('error', function() {
+            img.addEventListener('error', function handleError() {
                 console.warn('Image failed to load, trying fallback:', this.src);
                 this.classList.remove('img-loading');
                 
@@ -343,6 +425,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Try fallback
                 if (fallbackSrc && this.src !== fallbackSrc) {
                     this.src = fallbackSrc;
+                    // بعد أول محاولة فشل + fallback، شيل الليسنر عشان ما يحصلش لوب
+                    this.removeEventListener('error', handleError);
                 } else {
                     // Last resort - show placeholder
                     this.style.background = 'linear-gradient(135deg, #d4a574 0%, #c49564 100%)';
@@ -368,4 +452,47 @@ document.addEventListener('DOMContentLoaded', () => {
             heroImg.src = fallbackImages.hero;
         };
     }
+
+    // Desert video modal
+    const desertVideoTrigger = document.getElementById('desertVideoTrigger');
+    const desertVideoModal = document.getElementById('desertVideoModal');
+    const desertVideoFrame = document.getElementById('desertVideoFrame');
+    const desertVideoClose = document.getElementById('desertVideoClose');
+    const desertVideoBackdrop = document.getElementById('desertVideoBackdrop');
+    const DESERT_VIDEO_URL = 'https://www.youtube.com/embed/2ElPeQQMaXw?si=90ZowOqIhtOM-fC-&autoplay=1';
+
+    const openDesertVideo = () => {
+        if (!desertVideoModal || !desertVideoFrame) return;
+        desertVideoModal.classList.add('open');
+        desertVideoFrame.src = DESERT_VIDEO_URL;
+        document.body.classList.add('modal-open');
+    };
+
+    const closeDesertVideo = () => {
+        if (!desertVideoModal || !desertVideoFrame) return;
+        desertVideoModal.classList.remove('open');
+        desertVideoFrame.src = '';
+        document.body.classList.remove('modal-open');
+    };
+
+    if (desertVideoTrigger) {
+        desertVideoTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            openDesertVideo();
+        });
+    }
+
+    if (desertVideoClose) {
+        desertVideoClose.addEventListener('click', closeDesertVideo);
+    }
+
+    if (desertVideoBackdrop) {
+        desertVideoBackdrop.addEventListener('click', closeDesertVideo);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && desertVideoModal && desertVideoModal.classList.contains('open')) {
+            closeDesertVideo();
+        }
+    });
 });

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Egypt - Discover Ancient Wonders</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,54 +13,74 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="top-bar-left">
-                    <a href="tel:+201234567890" class="top-bar-link">
-                        <span class="top-bar-icon">📞</span>
-                        <span>+20 123 456 7890</span>
-                    </a>
-                    <a href="mailto:info@travelegypt.com" class="top-bar-link">
-                        <span class="top-bar-icon">✉️</span>
-                        <span>info@travelegypt.com</span>
-                    </a>
-                </div>
-                <div class="top-bar-right top-bar-social">
-                    <a href="#" class="top-bar-social-link" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="top-bar-social-link" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="top-bar-social-link" aria-label="Twitter" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="top-bar-social-link" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
     </div>
-
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a  href="#home" class="logo text-white">LOGO</a>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#packages" class="nav-link">Packages</a></li>
-                    <li><a href="#cruises" class="nav-link">Nile Cruises</a></li>
-                    <li><a href="#redsea" class="nav-link">Red Sea</a></li>
-                    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top main-navbar">
+        <div class="container px-lg-1">
+            <a class="navbar-brand logo d-flex align-items-center gap-2" href="#home">
+                <img src="assets/logo.png" alt="Logo" class="brand-logo-img" height="70">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cruises">Nile Cruises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#redsea">Red Sea</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="navbar-social d-flex align-items-center gap-2">
+                            <a href="#" class="navbar-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="navbar-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="navbar-social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item mt-3 mt-lg-0">
+                        <a class="btn btn-primary px-4" href="#packages">Book Your Trip</a>
+                    </li>
                 </ul>
-                <a href="#packages" class="nav-cta-btn">Book Your Trip</a>
-                <button class="nav-toggle" id="navToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
         </div>
     </nav>
 
+        <!-- Floating actions (WhatsApp + Scroll to top) -->
+        <div class="floating-actions">
+            <a href="https://wa.me/201234567890" target="_blank" rel="noopener" class="floating-btn floating-btn--whatsapp"
+                id="whatsappBtn" aria-label="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <button type="button" class="floating-btn floating-btn--scrolltop" id="scrollTopBtn"
+                aria-label="Scroll to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+
     <!-- Home/Hero Section -->
-    <section class="hero-section" id="home">
+    <section class="hero-section section-padding" id="home">
         <div class="hero-image">
             <!-- ضع صورتك في assets/hero-bg.png أو اترك الرابط الحالي -->
             <img src="assets/hero-bg.png" alt="Egypt Pyramids" loading="eager" class="hero-bg-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=90';">
@@ -81,15 +102,21 @@
                     </div>
                     <div class="hero-features scroll-animate" data-animation="fadeInUp" data-delay="600">
                         <div class="feature-item">
-                            <div class="feature-icon">🧭</div>
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
                             <span class="feature-text">Custom Trips</span>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">⭐</div>
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
                             <span class="feature-text">5-Star Service</span>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">🛡️</div>
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
                             <span class="feature-text">Best Price Guarantee</span>
                         </div>
                     </div>
@@ -102,7 +129,7 @@
     </section>
 
     <!-- Featured Packages Section -->
-    <section class="featured-packages" id="packages">
+    <section class="featured-packages section-padding" id="packages">
         <div class="container">
             <!-- Header Section -->
             <div class="section-header">
@@ -154,7 +181,7 @@
                                         <span>All Welcome</span>
                                     </div>
                                 </div>
-                                <button class="explore-btn">EXPLORE DETAILS</button>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -191,7 +218,7 @@
                                         <span>2-10 People</span>
                                     </div>
                                 </div>
-                                <button class="explore-btn">EXPLORE DETAILS</button>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -228,7 +255,7 @@
                                         <span>Family Friendly</span>
                                     </div>
                                 </div>
-                                <button class="explore-btn">EXPLORE DETAILS</button>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -265,7 +292,7 @@
                                         <span>All Ages</span>
                                     </div>
                                 </div>
-                                <button class="explore-btn">EXPLORE DETAILS</button>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -302,7 +329,192 @@
                                         <span>All Welcome</span>
                                     </div>
                                 </div>
-                                <button class="explore-btn">EXPLORE DETAILS</button>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 6 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1587486913048-54c2b2c7093c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Siwa Oasis" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1587486913048-54c2b2c7093c?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>SIWA OASIS</span>
+                                </div>
+                                <div class="category-badge">DESERT</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$420</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.7</span>
+                                    <span class="reviews">(61 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Siwa Oasis Eco Paradise</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>4 Days</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>Small Groups</span>
+                                    </div>
+                                </div>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 7 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Luxor Night" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>LUXOR</span>
+                                </div>
+                                <div class="category-badge">NIGHT TOUR</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$260</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.6</span>
+                                    <span class="reviews">(38 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Luxor Temples Night Tour</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>1 Evening</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>Guided Experience</span>
+                                    </div>
+                                </div>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 8 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Hurghada Red Sea" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>HURGHADA</span>
+                                </div>
+                                <div class="category-badge">RESORT</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$320</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.7</span>
+                                    <span class="reviews">(72 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Hurghada Red Sea Escape</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>4 Days</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>Couples & Families</span>
+                                    </div>
+                                </div>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 9 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1601224744670-41e757c59221?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Desert Safari" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1601224744670-41e757c59221?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>WESTERN DESERT</span>
+                                </div>
+                                <div class="category-badge">ADVENTURE</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$180</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.5</span>
+                                    <span class="reviews">(54 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Desert Safari & Stargazing</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>1 Night</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>Small Groups</span>
+                                    </div>
+                                </div>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Card 10 -->
+                    <div class="swiper-slide">
+                        <div class="package-card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1539755530862-00f623c00f37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Cairo City Lights" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539755530862-00f623c00f37?w=800&h=400&fit=crop'">
+                                <div class="location-badge">
+                                    <span class="pin-icon">📍</span>
+                                    <span>CAIRO</span>
+                                </div>
+                                <div class="category-badge">CITY BREAK</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="price-section">
+                                    <span class="price-label">STARTING FROM</span>
+                                    <span class="price">$240</span>
+                                </div>
+                                <div class="rating-section">
+                                    <span class="stars">★★★★☆</span>
+                                    <span class="rating-number">4.6</span>
+                                    <span class="reviews">(49 reviews)</span>
+                                </div>
+                                <h3 class="package-title">Cairo Nights & Bazaars</h3>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <span class="detail-icon">🕐</span>
+                                        <span>2 Days</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-icon">👥</span>
+                                        <span>Friends & Couples</span>
+                                    </div>
+                                </div>
+                                <a href="tour.html" class="explore-btn">EXPLORE DETAILS</a>
                             </div>
                         </div>
                     </div>
@@ -319,7 +531,7 @@
     </section>
 
     <!-- Royal Nile Cruises Section -->
-    <section class="nile-cruises-section" id="cruises">
+    <section class="nile-cruises-section section-padding" id="cruises">
         <div class="container">
             <div class="cruises-wrapper">
                 <!-- Left Column - Image -->
@@ -352,28 +564,36 @@
                     <!-- Feature Cards Grid -->
                     <div class="cruises-features-grid">
                         <div class="feature-card scroll-animate" data-animation="fadeInUp" data-delay="100">
-                            <div class="feature-card-icon">🛏️</div>
+                            <div class="feature-card-icon">
+                                <i class="fa-solid fa-bed"></i>
+                            </div>
                             <div class="feature-card-content">
                                 <h4 class="feature-card-title">Luxury Rooms</h4>
                                 <p class="feature-card-subtitle">Nile View</p>
                             </div>
                         </div>
                         <div class="feature-card scroll-animate" data-animation="fadeInUp" data-delay="200">
-                            <div class="feature-card-icon">🍽️</div>
+                            <div class="feature-card-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
                             <div class="feature-card-content">
                                 <h4 class="feature-card-title">World Cuisine</h4>
                                 <p class="feature-card-subtitle">Gourmet Dining</p>
                             </div>
                         </div>
                         <div class="feature-card scroll-animate" data-animation="fadeInUp" data-delay="300">
-                            <div class="feature-card-icon">☕</div>
+                            <div class="feature-card-icon">
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
                             <div class="feature-card-content">
                                 <h4 class="feature-card-title">Panoramic Bar</h4>
                                 <p class="feature-card-subtitle">Signature Drinks</p>
                             </div>
                         </div>
                         <div class="feature-card scroll-animate" data-animation="fadeInUp" data-delay="400">
-                            <div class="feature-card-icon">📷</div>
+                            <div class="feature-card-icon">
+                                <i class="fa-solid fa-camera-retro"></i>
+                            </div>
                             <div class="feature-card-content">
                                 <h4 class="feature-card-title">Guided Tours</h4>
                                 <p class="feature-card-subtitle">Expert Guides</p>
@@ -391,23 +611,501 @@
         </div>
     </section>
 
+    <!-- Red Sea Experience Section -->
+    <section class="redsea-section" id="redsea">
+        <div class="redsea-bg"></div>
+        <!-- <div class="redsea-overlay"></div> -->
+        <div class="container redsea-inner">
+            <div class="redsea-header scroll-animate" data-animation="fadeInUp">
+                <div class="redsea-tag">
+                    <span class="redsea-tag-icon"><i class="fa-solid fa-water"></i></span>
+                    <span class="redsea-tag-text">World-Class Diving Destination</span>
+                </div>
+                <h2 class="redsea-title">
+                    Explore the <span class="highlight">Red Sea</span>
+                </h2>
+                <p class="redsea-description">
+                    Dive into a magical world of colorful coral reefs and incredible marine life. Enjoy unforgettable diving experiences in crystal-clear waters along Egypt's Red Sea coast.
+                </p>
+            </div>
+
+            <div class="redsea-stats-grid">
+                <div class="redsea-stat-card scroll-animate" data-animation="fadeInUp" data-delay="100">
+                    <div class="redsea-stat-icon">
+                        <i class="fa-solid fa-fish"></i>
+                    </div>
+                    <div class="redsea-stat-number">1000+</div>
+                    <div class="redsea-stat-label">Fish Species</div>
+                </div>
+
+                <div class="redsea-stat-card scroll-animate" data-animation="fadeInUp" data-delay="200">
+                    <div class="redsea-stat-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div class="redsea-stat-number">365</div>
+                    <div class="redsea-stat-label">Sunny Days</div>
+                </div>
+
+                <div class="redsea-stat-card scroll-animate" data-animation="fadeInUp" data-delay="300">
+                    <div class="redsea-stat-icon">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <div class="redsea-stat-number">50+</div>
+                    <div class="redsea-stat-label">Luxury Resorts</div>
+                </div>
+
+                <div class="redsea-stat-card scroll-animate" data-animation="fadeInUp" data-delay="400">
+                    <div class="redsea-stat-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <div class="redsea-stat-number">30m</div>
+                    <div class="redsea-stat-label">Underwater Visibility</div>
+                </div>
+            </div>
+
+            <div class="redsea-cta scroll-animate" data-animation="fadeInUp" data-delay="500">
+                <a href="#packages" class="btn btn-primary">Book a Diving Trip</a>
+                <a href="#packages" class="btn btn-outline">Discover Beaches</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desert Safari Highlight Section -->
+    <section class="desert-section" id="desert">
+        <div class="container">
+            <div class="desert-inner">
+                <div class="desert-image-col scroll-animate" data-animation="fadeInLeft">
+                    <div class="desert-image-wrapper">
+                        <img src="assets/desert-safar.jpg" alt="Egyptian Desert Safari" class="desert-image">
+                        <div class="desert-image-gradient"></div>
+                    </div>
+                </div>
+
+                <div class="desert-content-col scroll-animate" data-animation="fadeInRight">
+                    <div class="desert-kicker">
+                        <span class="desert-kicker-dot"></span>
+                        <span class="desert-kicker-text">An Unforgettable Adventure</span>
+                    </div>
+                    <h2 class="desert-title">
+                        Egyptian <span class="desert-title-highlight">Desert Safari</span>
+                    </h2>
+                    <p class="desert-description">
+                        Ride across Egypt's golden dunes at sunset, camp under a sky filled with stars, and
+                        feel the silence of the desert with our expert Bedouin guides and premium desert camps.
+                    </p>
+
+                    <div class="desert-feature-list">
+                        <div class="desert-feature-item">
+                            <i class="fa-solid fa-campground"></i>
+                            <div class="desert-feature-text">
+                                <span class="desert-feature-title">Luxury Desert Camp</span>
+                                <span class="desert-feature-subtitle">Private tents & gourmet dining</span>
+                            </div>
+                        </div>
+                        <div class="desert-feature-item">
+                            <i class="fa-solid fa-star"></i>
+                            <div class="desert-feature-text">
+                                <span class="desert-feature-title">Stargazing Nights</span>
+                                <span class="desert-feature-subtitle">Crystal-clear Milky Way views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="desert-cta">
+                        <a href="#packages" class="btn btn-primary">Book Your Adventure</a>
+                        <a href="javascript:void(0)" class="btn btn-outline desert-cta-secondary" id="desertVideoTrigger">
+                            <i class="fa-solid fa-play"></i>
+                            <span>Watch Video</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desert Video Modal -->
+    <div class="video-modal" id="desertVideoModal" aria-hidden="true">
+        <div class="video-modal-backdrop" id="desertVideoBackdrop"></div>
+        <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="desertVideoTitle">
+            <button class="video-modal-close" id="desertVideoClose" aria-label="Close video">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-modal-body">
+                <h3 class="video-modal-title" id="desertVideoTitle">Egyptian Desert Safari</h3>
+                <div class="video-modal-frame-wrapper">
+                    <iframe
+                        id="desertVideoFrame"
+                        src=""
+                        title="Egyptian Desert Safari"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-header scroll-animate" data-animation="fadeInUp">
+                <div class="section-label">
+                    <span class="star-icon">✦</span>
+                    <span>Trusted by Travellers</span>
+                </div>
+                <h2 class="section-title">
+                    What Our <span class="highlight">Customers Say</span>
+                </h2>
+                <p class="section-description">
+                    We are proud of the trust of more than 50,000 travellers who chose us to design their dream trip to Egypt.
+                </p>
+            </div>
+
+            <div class="swiper testimonials-carousel scroll-animate" data-animation="fadeInUp" data-delay="150">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "Professional service, beautiful Nile views, and delicious food. The perfect holiday for me and my partner!"
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">E</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">Elena Rossi</div>
+                                    <div class="testimonial-location">Italy</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "Diving in the Red Sea was life-changing. Highly recommend their adventure packages for anyone visiting Egypt."
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">J</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">John Smith</div>
+                                    <div class="testimonial-location">Canada</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "Everything was perfectly organized from airport pick-up to private tours at the pyramids. Highly recommended!"
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">D</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">David Brown</div>
+                                    <div class="testimonial-location">UK</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "Our family cruise on the Nile was unforgettable. The kids loved it and the guides were incredibly helpful."
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">A</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">Amira Khalil</div>
+                                    <div class="testimonial-location">UAE</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "As an Egyptian, I was impressed by how smooth everything was. Great service and amazing local knowledge."
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">Y</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">Youssef Mansour</div>
+                                    <div class="testimonial-location">Egypt</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "From the Red Sea to the desert, every part of our itinerary felt carefully designed and truly special."
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">S</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">Sophie Müller</div>
+                                    <div class="testimonial-location">Germany</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 7 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "The boutique hotels they chose for us in Cairo and Aswan were absolutely stunning and very comfortable."
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">M</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">Maria Lopez</div>
+                                    <div class="testimonial-location">Spain</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 8 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "Our kids still talk about the Nile cruise and sound & light show at Karnak. Truly a family trip to remember."
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">K</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">Karen Wilson</div>
+                                    <div class="testimonial-location">USA</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 9 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "Excellent communication from the team, flexible changes, and safe drivers everywhere we went."
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">L</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">Liam O'Connor</div>
+                                    <div class="testimonial-location">Ireland</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Testimonial 10 -->
+                    <div class="swiper-slide">
+                        <article class="testimonial-card">
+                            <div class="testimonial-top">
+                                <div class="testimonial-rating">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                "Best agency we have ever booked with. They made Egypt feel both adventurous and incredibly easy."
+                            </p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-avatar">N</div>
+                                <div class="testimonial-meta">
+                                    <div class="testimonial-name">Nadia Karim</div>
+                                    <div class="testimonial-location">France</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination testimonials-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Get in Touch Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="contact-header section-header scroll-animate" data-animation="fadeInUp">
+                <div class="section-label">
+                    <span class="star-icon">✦</span>
+                    <span>Get in Touch</span>
+                </div>
+                <h2 class="section-title">
+                    Let's Plan Your <span class="highlight">Dream Trip</span>
+                </h2>
+                <p class="section-description">
+                    Ready to explore Egypt? Our expert team is just a message away. Reach out for tailored itineraries,
+                    premium support, and unforgettable experiences.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card scroll-animate" data-animation="fadeInUp" data-delay="100">
+                    <div class="contact-card-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h3 class="contact-card-title">Call Us Now</h3>
+                        <p class="contact-card-text">+20 123 456 7890</p>
+                    </div>
+                    <a href="tel:+201234567890" class="contact-card-cta">
+                        <span>Call Now</span>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+
+                <div class="contact-card scroll-animate" data-animation="fadeInUp" data-delay="200">
+                    <div class="contact-card-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h3 class="contact-card-title">Email Support</h3>
+                        <p class="contact-card-text">info@travelegypt.com</p>
+                    </div>
+                    <a href="mailto:info@travelegypt.com" class="contact-card-cta">
+                        <span>Send Email</span>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+
+                <div class="contact-card scroll-animate" data-animation="fadeInUp" data-delay="300">
+                    <div class="contact-card-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h3 class="contact-card-title">Visit Our Office</h3>
+                        <p class="contact-card-text">Cairo, Egypt</p>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener" class="contact-card-cta">
+                        <span>Get Directions</span>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+
+                <div class="contact-card scroll-animate" data-animation="fadeInUp" data-delay="400">
+                    <div class="contact-card-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <h3 class="contact-card-title">Working Hours</h3>
+                        <p class="contact-card-text">24/7 Customer Support</p>
+                    </div>
+                    <a href="#contact" class="contact-card-cta">
+                        <span>Contact Anytime</span>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <span class="logo-icon">✈️</span>
+                        <img src="assets/logo.png" alt="Travel Egypt" class="footer-logo-img">
                         <span class="logo-text">Travel Egypt</span>
                     </div>
                     <p class="footer-description">
                         We offer you the best travel experiences in Egypt with trips designed to discover the wonders of ancient and modern Egypt.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-                        <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -432,26 +1130,27 @@
                     <h3 class="footer-title">Contact Info</h3>
                     <ul class="footer-contact">
                         <li>
-                            <span class="contact-icon">📍</span>
+                            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
                             <span>Cairo, Egypt</span>
                         </li>
                         <li>
-                            <span class="contact-icon">📞</span>
+                            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
                             <span>+20 123 456 7890</span>
                         </li>
                         <li>
-                            <span class="contact-icon">✉️</span>
+                            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
                             <span>info@travelegypt.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Travel Egypt. All rights reserved.</p>
+                <p>&copy; 2026 <a href="#" class="text-warning text-decoration-none">Travel Egypt</a>. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
