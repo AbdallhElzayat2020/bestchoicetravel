@@ -273,7 +273,7 @@ html {
 }
 
 .brand-logo-img {
-    height: 90px;
+    height: 95px;
     width: auto;
 }
 
@@ -329,6 +329,30 @@ html {
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-color);
+}
+
+/* Dropdown toggle arrow icon in navbar */
+.navbar .dropdown-toggle::after {
+    content: '\f107'; /* Font Awesome chevron-down */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 10px;
+    margin-left: 6px;
+    border: 0;
+    vertical-align: middle;
+}
+
+.navbar .dropdown-toggle.show::after,
+.navbar .dropdown:hover .dropdown-toggle::after {
+    content: '\f106'; /* chevron-up when open */
+}
+
+/* Open dropdown on hover (desktop) */
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
 }
 
 /* Active nav link: just underline */
