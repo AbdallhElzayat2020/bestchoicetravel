@@ -1,59 +1,62 @@
 // Initialize Swiper with 3D Coverflow Effect (Packages)
-const swiper = new Swiper('.packages-carousel', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    centeredSlides: true,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
-    effect: 'coverflow',
-    coverflowEffect: {
-        rotate: 15,
-        stretch: 0,
-        depth: 300,
-        modifier: 1.2,
-        slideShadows: true,
-    },
-    grabCursor: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            coverflowEffect: {
-                rotate: 20,
-                depth: 250,
+if (document.querySelector('.packages-carousel')) {
+    // eslint-disable-next-line no-unused-vars
+    const swiper = new Swiper('.packages-carousel', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 15,
+            stretch: 0,
+            depth: 300,
+            modifier: 1.2,
+            slideShadows: true,
+        },
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                coverflowEffect: {
+                    rotate: 20,
+                    depth: 250,
+                },
+            },
+            768: {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                coverflowEffect: {
+                    rotate: 15,
+                    depth: 300,
+                },
+            },
+            1024: {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                coverflowEffect: {
+                    rotate: 15,
+                    depth: 350,
+                },
             },
         },
-        768: {
-            slidesPerView: 'auto',
-            spaceBetween: 30,
-            coverflowEffect: {
-                rotate: 15,
-                depth: 300,
-            },
-        },
-        1024: {
-            slidesPerView: 'auto',
-            spaceBetween: 30,
-            coverflowEffect: {
-                rotate: 15,
-                depth: 350,
-            },
-        },
-    },
-});
+    });
+}
 
 // Testimonials Swiper
 if (document.querySelector('.testimonials-carousel')) {
@@ -161,6 +164,171 @@ document.addEventListener('DOMContentLoaded', () => {
             closeTourLightbox();
         }
     });
+});
+
+// Tours page: search + filters + sort
+document.addEventListener('DOMContentLoaded', () => {
+    const toursPage = document.querySelector('.tours-page');
+    if (!toursPage) return;
+
+    const cards = Array.from(document.querySelectorAll('.tours-card[data-tour="1"]'));
+    const grids = Array.from(document.querySelectorAll('[data-tours-grid]'));
+    const sections = Array.from(document.querySelectorAll('.tours-section'));
+
+    const chips = Array.from(document.querySelectorAll('.tours-filter-chip[data-tour-type]'));
+    const searchInput = document.getElementById('toursSearch');
+    const sortSelect = document.getElementById('toursSort');
+    const durationSelect = document.getElementById('toursDuration');
+    const minPriceInput = document.getElementById('toursMinPrice');
+    const maxPriceInput = document.getElementById('toursMaxPrice');
+    const onSaleInput = document.getElementById('toursOnSale');
+    const resetBtn = document.getElementById('toursReset');
+    const resultsCount = document.getElementById('toursResultsCount');
+
+    let activeType = 'all';
+
+    const normalize = (s) => String(s || '').toLowerCase().trim();
+
+    const parseRange = (value) => {
+        if (!value || value === 'all') return null;
+        const [min, max] = value.split('-').map((v) => Number(v));
+        if (Number.isFinite(min) && Number.isFinite(max)) return { min, max };
+        return null;
+    };
+
+    const setActiveChip = (type) => {
+        activeType = type || 'all';
+        chips.forEach((chip) => chip.classList.toggle('active', chip.dataset.tourType === activeType));
+    };
+
+    const getFilters = () => {
+        const q = normalize(searchInput?.value);
+        const durationRange = parseRange(durationSelect?.value);
+        const minPriceValue = (minPriceInput?.value || '').trim();
+        const maxPriceValue = (maxPriceInput?.value || '').trim();
+        const minPrice = minPriceValue ? Number(minPriceValue) : null;
+        const maxPrice = maxPriceValue ? Number(maxPriceValue) : null;
+        const onSaleOnly = Boolean(onSaleInput?.checked);
+
+        return {
+            q,
+            type: activeType,
+            durationRange,
+            minPrice: minPrice != null && Number.isFinite(minPrice) ? minPrice : null,
+            maxPrice: maxPrice != null && Number.isFinite(maxPrice) ? maxPrice : null,
+            onSaleOnly,
+            sort: sortSelect?.value || 'recommended',
+        };
+    };
+
+    const matches = (card, filters) => {
+        const type = card.dataset.type || 'egypt';
+        const days = Number(card.dataset.days || 0);
+        const price = Number(card.dataset.price || 0);
+        const discount = Number(card.dataset.discount || 0);
+
+        if (filters.type !== 'all' && type !== filters.type) return false;
+
+        if (filters.durationRange) {
+            if (!(days >= filters.durationRange.min && days <= filters.durationRange.max)) return false;
+        }
+
+        if (filters.minPrice != null && price < filters.minPrice) return false;
+        if (filters.maxPrice != null && price > filters.maxPrice) return false;
+
+        if (filters.onSaleOnly && !(discount > 0)) return false;
+
+        if (filters.q) {
+            const hay = normalize(card.innerText);
+            if (!hay.includes(filters.q)) return false;
+        }
+
+        return true;
+    };
+
+    const applyVisibility = (filters) => {
+        let visibleCount = 0;
+        cards.forEach((card) => {
+            const isVisible = matches(card, filters);
+            card.classList.toggle('tours-card--hidden', !isVisible);
+            if (isVisible) visibleCount += 1;
+        });
+
+        // Hide empty sections
+        sections.forEach((section) => {
+            const sectionCards = section.querySelectorAll('.tours-card[data-tour="1"]');
+            const anyVisible = Array.from(sectionCards).some((c) => !c.classList.contains('tours-card--hidden'));
+            section.classList.toggle('tours-section--empty', !anyVisible);
+        });
+
+        if (resultsCount) resultsCount.textContent = String(visibleCount);
+    };
+
+    const applySort = (filters) => {
+        const sort = filters.sort;
+        if (sort === 'recommended') return;
+
+        grids.forEach((grid) => {
+            const visibleCards = Array.from(grid.querySelectorAll('.tours-card[data-tour="1"]:not(.tours-card--hidden)'));
+            const hiddenCards = Array.from(grid.querySelectorAll('.tours-card[data-tour="1"].tours-card--hidden'));
+
+            const valueFor = (card) => {
+                const price = Number(card.dataset.price || 0);
+                const days = Number(card.dataset.days || 0);
+                if (sort.startsWith('price')) return price;
+                if (sort.startsWith('days')) return days;
+                return 0;
+            };
+
+            visibleCards.sort((a, b) => {
+                const av = valueFor(a);
+                const bv = valueFor(b);
+                if (sort.endsWith('asc')) return av - bv;
+                return bv - av;
+            });
+
+            // Re-append in order (visible first, keep hidden at the end)
+            visibleCards.forEach((c) => grid.appendChild(c));
+            hiddenCards.forEach((c) => grid.appendChild(c));
+        });
+    };
+
+    const run = () => {
+        const filters = getFilters();
+        applyVisibility(filters);
+        applySort(filters);
+    };
+
+    // Events
+    chips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+            setActiveChip(chip.dataset.tourType || 'all');
+            run();
+        });
+    });
+
+    [searchInput, sortSelect, durationSelect, minPriceInput, maxPriceInput, onSaleInput].forEach((el) => {
+        if (!el) return;
+        el.addEventListener('input', run);
+        el.addEventListener('change', run);
+    });
+
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            if (searchInput) searchInput.value = '';
+            if (sortSelect) sortSelect.value = 'recommended';
+            if (durationSelect) durationSelect.value = 'all';
+            if (minPriceInput) minPriceInput.value = '';
+            if (maxPriceInput) maxPriceInput.value = '';
+            if (onSaleInput) onSaleInput.checked = false;
+            setActiveChip('all');
+            run();
+        });
+    }
+
+    // Init
+    setActiveChip('all');
+    run();
 });
 
 // Add click handlers for explore buttons
