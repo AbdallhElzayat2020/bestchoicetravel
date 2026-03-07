@@ -2874,6 +2874,114 @@ body.modal-open {
     margin-top: 36px;
 }
 
+/* Contact section: Review/Trust cards (Trustpilot, Google, TripAdvisor) */
+.contact-grid--reviews {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.review-trust-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffff;
+    border: 2px solid rgba(148, 163, 184, 0.35);
+    border-radius: 16px;
+    padding: 24px 28px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.review-trust-card:hover {
+    border-color: var(--brand-blue);
+    box-shadow: 0 12px 32px rgba(43, 83, 167, 0.2);
+    transform: translateY(-4px);
+}
+
+.review-trust-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.review-trust-icon--trustpilot {
+    background: #00B67A;
+}
+
+.review-trust-icon--trustpilot .review-trust-img,
+.review-trust-icon--tripadvisor .review-trust-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.review-trust-icon--google {
+    background: #ffffff;
+    border: 2px solid #4285F4;
+}
+
+.review-trust-icon--google i {
+    font-size: 28px;
+    color: #4285F4;
+}
+
+.review-trust-icon--tripadvisor {
+    background: #00AF87;
+}
+
+.review-trust-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.review-trust-content {
+    flex: 1;
+}
+
+.review-trust-label {
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.review-trust-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-trust-score {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.review-trust-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.review-trust-stars i {
+    font-size: 14px;
+    color: var(--brand-yellow-dark);
+}
+
+.review-trust-stars .fa-star-last {
+    opacity: 0.5;
+}
+
 .contact-card {
     background:
         radial-gradient(circle at top left, rgba(248, 230, 0, 0.08), transparent 55%),
@@ -2939,11 +3047,29 @@ body.modal-open {
     .contact-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .contact-grid--reviews {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 576px) {
     .contact-grid {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .contact-grid--reviews {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .review-trust-card {
+        padding: 20px 22px;
+    }
+
+    .review-trust-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
     }
 }
 
