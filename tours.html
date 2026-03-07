@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Cairo:wght@200..1000&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -23,11 +23,11 @@
         <div class="scroll-progress-bar" id="scrollProgressBar"></div>
     </div>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar (same as home) -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top main-navbar">
         <div class="container px-lg-1">
-            <a class="navbar-brand logo d-flex align-items-center gap-2" href="index.html#home">
-                <img src="assets/logo.png" alt="Logo" class="brand-logo-img" />
+            <a class="navbar-brand logo d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/logo_main.png" alt="Logo" class="brand-logo-img" height="70">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
@@ -41,63 +41,49 @@
                         <a class="nav-link" href="index.html#home">Home</a>
                     </li>
 
-                    <!-- 2- Egypt Tours -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="tours.html#egypt-tours" id="navEgyptToursAll"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" id="navEgyptTours" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Egypt Tours
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navEgyptToursAll">
-                            <li><a class="dropdown-item" href="#egypt-tours">Egypt Tour Packages</a></li>
-                            <li><a class="dropdown-item" href="#desert-tours">Egypt Desert Tours</a></li>
-                            <li><a class="dropdown-item" href="#redsea-tours">Red Sea Vacations</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navEgyptTours">
+                            <li><a class="dropdown-item" href="tours.html">Egypt Tour Packages</a></li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt Desert Tours</a></li>
+                            <li><a class="dropdown-item" href="index.html#redsea">Red Sea Vacations</a></li>
                         </ul>
                     </li>
 
-                    <!-- 3- Nile Cruises -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#nile-cruises" id="navNileCruisesAll" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navNileCruises" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Nile Cruises
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navNileCruisesAll">
-                            <li><a class="dropdown-item" href="#nile-cruises">Nile Cruises</a></li>
-                            <li><a class="dropdown-item" href="#nile-cruises">Dahabiya Nile Cruises</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navNileCruises">
+                            <li><a class="dropdown-item" href="index.html#cruises">Nile Cruises</a></li>
+                            <li><a class="dropdown-item" href="index.html#cruises">Dahabiya Nile Cruises</a></li>
                         </ul>
                     </li>
 
-                    <!-- 4- Day Excursions -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#day-excursions">Day Excursions</a>
+                        <a class="nav-link" href="index.html#packages">Day Excursions</a>
                     </li>
 
-                    <!-- 5- Egypt & Beyond -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#egypt-beyond" id="navEgyptBeyondAll" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navEgyptBeyond" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Egypt &amp; Beyond
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navEgyptBeyondAll">
-                            <li><a class="dropdown-item" href="#egypt-beyond">Egypt &amp; Jordan Tours</a></li>
-                            <li><a class="dropdown-item" href="#egypt-beyond">Egypt &amp; Saudi Arabia Tours</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navEgyptBeyond">
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Jordan Tours</a></li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Saudi Arabia Tours</a>
+                            </li>
                         </ul>
                     </li>
 
-                    <!-- Plan your tours -->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Plan Your Tours</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
 
-                    <li class="nav-item">
-                        <div class="navbar-social d-flex align-items-center gap-2">
-                            <a href="#" class="navbar-social-link" aria-label="Facebook"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="navbar-social-link" aria-label="Instagram"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="navbar-social-link" aria-label="X (Twitter)"><i
-                                    class="fa-brands fa-x-twitter"></i></a>
-                        </div>
-                    </li>
                     <li class="nav-item mt-3 mt-lg-0">
                         <a class="btn btn-primary px-4" href="index.html#packages">Book Your Trip</a>
                     </li>
@@ -108,8 +94,8 @@
 
     <!-- Floating actions (WhatsApp + Scroll to top) -->
     <div class="floating-actions">
-        <a href="https://wa.me/201234567890" target="_blank" rel="noopener"
-            class="floating-btn floating-btn--whatsapp" id="whatsappBtn" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/201234567890" target="_blank" rel="noopener" class="floating-btn floating-btn--whatsapp"
+            id="whatsappBtn" aria-label="Chat on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
         <button type="button" class="floating-btn floating-btn--scrolltop" id="scrollTopBtn" aria-label="Scroll to top">
@@ -119,94 +105,12 @@
 
     <main class="tours-page">
         <!-- Hero / Filters -->
-        <section class="tours-hero section-padding" id="all-tours">
+        <section class="about-banner" id="about-intro" style="background-image: url('assets/Nile-Cruise.webp');">
+            <div class="about-banner-overlay"></div>
             <div class="container">
-                <div class="row g-4 align-items-start">
-                    <div class="col-lg-12">
-                        <div class="section-label scroll-animate" data-animation="fadeInUp">
-                            <span class="star-icon">✦</span>
-                            <span>ALL TOURS</span>
-                            <span class="star-icon">✦</span>
-                        </div>
-                        <h1 class="tours-hero-title scroll-animate" data-animation="fadeInUp" data-delay="100">
-                            Search, Filter &amp; Compare <span class="highlight">Egypt Tours</span>
-                        </h1>
-                        <p class="tours-hero-text scroll-animate" data-animation="fadeInUp" data-delay="200">
-                            Use the filters below to find your perfect trip — then explore details, pricing, and
-                            availability.
-                        </p>
-
-                        <div class="tours-filters scroll-animate" data-animation="fadeInUp" data-delay="260">
-                            <button class="tours-filter-chip active" type="button" data-tour-type="all">All Tours</button>
-                            <button class="tours-filter-chip" type="button" data-tour-type="egypt">Egypt Tours</button>
-                            <button class="tours-filter-chip" type="button" data-tour-type="nile">Nile Cruises</button>
-                            <button class="tours-filter-chip" type="button" data-tour-type="redsea">Red Sea &amp; Beach</button>
-                            <button class="tours-filter-chip" type="button" data-tour-type="desert">Desert &amp; Safari</button>
-                            <button class="tours-filter-chip" type="button" data-tour-type="beyond">Egypt &amp; Beyond</button>
-                            <button class="tours-filter-chip" type="button" data-tour-type="day">Day Excursions</button>
-                        </div>
-
-                        <div class="tours-controls scroll-animate" data-animation="fadeInUp" data-delay="320">
-                            <div class="tours-controls-row">
-                                <div class="tours-search">
-                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                    <input id="toursSearch" type="search" autocomplete="off"
-                                        placeholder="Search tours (Cairo, Nile, Hurghada…)" aria-label="Search tours" />
-                                </div>
-
-                                <select id="toursSort" class="tours-select" aria-label="Sort tours">
-                                    <option value="recommended">Sort: Recommended</option>
-                                    <option value="price_asc">Price: Low to High</option>
-                                    <option value="price_desc">Price: High to Low</option>
-                                    <option value="days_asc">Duration: Shortest</option>
-                                    <option value="days_desc">Duration: Longest</option>
-                                </select>
-                            </div>
-
-                            <div class="tours-controls-row tours-controls-row--secondary">
-                                <select id="toursDuration" class="tours-select" aria-label="Filter by duration">
-                                    <option value="all">Duration: Any</option>
-                                    <option value="1-3">1–3 days</option>
-                                    <option value="4-7">4–7 days</option>
-                                    <option value="8-12">8–12 days</option>
-                                    <option value="13-99">13+ days</option>
-                                </select>
-
-                                <div class="tours-price-range" aria-label="Filter by price">
-                                    <input id="toursMinPrice" class="tours-input" type="number" min="0" step="10"
-                                        placeholder="Min $" aria-label="Minimum price" />
-                                    <span class="tours-price-sep" aria-hidden="true">—</span>
-                                    <input id="toursMaxPrice" class="tours-input" type="number" min="0" step="10"
-                                        placeholder="Max $" aria-label="Maximum price" />
-                                </div>
-
-                                <label class="tours-toggle">
-                                    <input id="toursOnSale" type="checkbox" />
-                                    <span>On Sale</span>
-                                </label>
-
-                                <button id="toursReset" class="tours-reset" type="button">Reset</button>
-
-                                <div class="tours-results" aria-live="polite">
-                                    <strong id="toursResultsCount">0</strong>
-                                    <span>tours</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-                </div>
-
-                <div class="tours-meta scroll-animate" data-animation="fadeInUp" data-delay="420">
-                    <div class="tours-meta-item">
-                        <i class="fa-solid fa-star"></i>
-                        <span>4.9/5 average guest rating</span>
-                    </div>
-                    <div class="tours-meta-item">
-                        <i class="fa-solid fa-suitcase-rolling"></i>
-                        <span>Curated itineraries &amp; flexible planning</span>
-                    </div>
+                <div class="about-banner-inner">
+                    <h1 class="about-banner-title">Egypt Tour Packages</h1>
+                    <p class="about-banner-subtitle">Classic itineraries that combine Cairo, the Nile, and the Red Sea for a complete Egypt experience.</p>
                 </div>
             </div>
         </section>
@@ -243,7 +147,7 @@
                         <div class="tours-card-body">
                             <div class="tours-card-top">
                                 <span class="tours-card-category">Egypt Tour</span>
-                                <span class="tours-card-rating"><i class="fa-solid fa-star"></i> 4.9 (124 reviews)</span>
+                               
                             </div>
                             <h3 class="tours-card-title">8 Days Classic Cairo &amp; Nile Cruise</h3>
                             <p class="tours-card-text">
@@ -275,7 +179,6 @@
                         <div class="tours-card-body">
                             <div class="tours-card-top">
                                 <span class="tours-card-category">Egypt Tour</span>
-                                <span class="tours-card-rating"><i class="fa-solid fa-star"></i> 4.8 (89 reviews)</span>
                             </div>
                             <h3 class="tours-card-title">7 Days Cairo &amp; Red Sea Escape</h3>
                             <p class="tours-card-text">
@@ -307,7 +210,101 @@
                         <div class="tours-card-body">
                             <div class="tours-card-top">
                                 <span class="tours-card-category">Egypt Tour</span>
-                                <span class="tours-card-rating"><i class="fa-solid fa-star"></i> 5.0 (32 reviews)</span>
+                            </div>
+                            <h3 class="tours-card-title">10 Days Egypt Highlights &amp; Desert Adventure</h3>
+                            <p class="tours-card-text">
+                                Pyramids, Nile cruise, White Desert overnight camping and Red Sea snorkeling.
+                            </p>
+                            <div class="tours-card-meta">
+                                <span><i class="fa-regular fa-clock"></i> 10 Days</span>
+                                <span><i class="fa-solid fa-mountain-sun"></i> Adventure</span>
+                            </div>
+                            <div class="tours-card-footer">
+                                <div class="tours-card-price">
+                                    <span class="tours-card-price-label">From</span>
+                                    <span class="tours-card-price-old">$1,755</span>
+                                    <span class="tours-card-price-main">$1,580</span>
+                                    <span class="tours-card-price-note">per person</span>
+                                </div>
+                                <a href="tour.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tours-card scroll-animate" data-tour="1" data-type="egypt" data-days="8"
+                        data-price="1250" data-discount="15" data-animation="fadeInUp" data-delay="0">
+                        <div class="tours-card-image">
+                            <img src="assets/Aswan.webp" alt="Classic Cairo & Nile Cruise"
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=500&fit=crop';" />
+                            <span class="tours-card-badge">Best Seller</span>
+                            <span class="tours-card-badge badge-sale badge-right">On Sale</span>
+                        </div>
+                        <div class="tours-card-body">
+                            <div class="tours-card-top">
+                                <span class="tours-card-category">Egypt Tour</span>
+                             
+                            </div>
+                            <h3 class="tours-card-title">8 Days Classic Cairo &amp; Nile Cruise</h3>
+                            <p class="tours-card-text">
+                                Cairo, Giza pyramids, Luxor &amp; Aswan Nile cruise with expert Egyptologist guide.
+                            </p>
+                            <div class="tours-card-meta">
+                                <span><i class="fa-regular fa-clock"></i> 8 Days</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Cairo · Luxor · Aswan</span>
+                            </div>
+                            <div class="tours-card-footer">
+                                <div class="tours-card-price">
+                                    <span class="tours-card-price-label">From</span>
+                                    <span class="tours-card-price-old">$1,470</span>
+                                    <span class="tours-card-price-main">$1,250</span>
+                                    <span class="tours-card-price-note">per person</span>
+                                </div>
+                                <a href="tour.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tours-card scroll-animate" data-tour="1" data-type="egypt" data-days="7"
+                        data-price="980" data-animation="fadeInUp" data-delay="100">
+                        <div class="tours-card-image">
+                            <img src="assets/Luxor.webp" alt="Cairo & Red Sea Escape"
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=500&fit=crop';" />
+                            <span class="tours-card-badge badge-secondary">Family Friendly</span>
+                        </div>
+                        <div class="tours-card-body">
+                            <div class="tours-card-top">
+                                <span class="tours-card-category">Egypt Tour</span>
+                            </div>
+                            <h3 class="tours-card-title">7 Days Cairo &amp; Red Sea Escape</h3>
+                            <p class="tours-card-text">
+                                Iconic Cairo highlights combined with relaxing days on the Red Sea beaches.
+                            </p>
+                            <div class="tours-card-meta">
+                                <span><i class="fa-regular fa-clock"></i> 7 Days</span>
+                                <span><i class="fa-solid fa-water"></i> Hurghada</span>
+                            </div>
+                            <div class="tours-card-footer">
+                                <div class="tours-card-price">
+                                    <span class="tours-card-price-label">From</span>
+                                    <span class="tours-card-price-main">$980</span>
+                                    <span class="tours-card-price-note">per person</span>
+                                </div>
+                                <a href="tour.html" class="btn btn-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tours-card scroll-animate" data-tour="1" data-type="egypt" data-days="10"
+                        data-price="1580" data-discount="10" data-animation="fadeInUp" data-delay="200">
+                        <div class="tours-card-image">
+                            <img src="assets/Nile-Cruise.webp" alt="Egypt Highlights & Desert Adventure"
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587486913048-54c2b2c7093c?w=800&h=500&fit=crop';" />
+                            <span class="tours-card-badge badge-accent">New</span>
+                            <span class="tours-card-badge badge-sale badge-right">On Sale</span>
+                        </div>
+                        <div class="tours-card-body">
+                            <div class="tours-card-top">
+                                <span class="tours-card-category">Egypt Tour</span>
                             </div>
                             <h3 class="tours-card-title">10 Days Egypt Highlights &amp; Desert Adventure</h3>
                             <p class="tours-card-text">
@@ -332,195 +329,6 @@
             </div>
         </section>
 
-        <!-- Nile Cruises -->
-        <section class="tours-section section-padding" id="nile-cruises">
-            <div class="container">
-                <div class="tours-section-header">
-                    <div class="section-label scroll-animate" data-animation="fadeInUp">
-                        <span class="star-icon">✦</span>
-                        <span>NILE CRUISES</span>
-                        <span class="star-icon">✦</span>
-                    </div>
-                    <div class="tours-section-heading">
-                        <h2 class="section-title scroll-animate" data-animation="fadeInUp" data-delay="50">
-                            Luxury <span class="highlight">Nile Cruises</span>
-                        </h2>
-                        <p class="section-description scroll-animate" data-animation="fadeInUp" data-delay="100">
-                            Sail between Luxor and Aswan in comfort with daily guided visits.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="tours-grid" data-tours-grid>
-                    <article class="tours-card scroll-animate" data-tour="1" data-type="nile" data-days="6"
-                        data-price="1050" data-discount="20" data-animation="fadeInUp" data-delay="0">
-                        <div class="tours-card-image">
-                            <img src="assets/hero-bg.png" alt="Luxury Nile Cruise"
-                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=500&fit=crop';" />
-                            <span class="tours-card-badge">On Sale</span>
-                            <span class="tours-card-badge badge-sale badge-right">On Sale</span>
-                        </div>
-                        <div class="tours-card-body">
-                            <div class="tours-card-top">
-                                <span class="tours-card-category">Nile Cruise</span>
-                                <span class="tours-card-rating"><i class="fa-solid fa-star"></i> 4.9 (87 reviews)</span>
-                            </div>
-                            <h3 class="tours-card-title">6 Days Luxury Nile Cruise: Luxor to Aswan</h3>
-                            <p class="tours-card-text">All‑inclusive cruise with daily guided tours to ancient temples.</p>
-                            <div class="tours-card-meta">
-                                <span><i class="fa-regular fa-clock"></i> 6 Days</span>
-                                <span><i class="fa-solid fa-ship"></i> 5★ Cruise</span>
-                            </div>
-                            <div class="tours-card-footer">
-                                <div class="tours-card-price">
-                                    <span class="tours-card-price-label">From</span>
-                                    <span class="tours-card-price-old">$1,312</span>
-                                    <span class="tours-card-price-main">$1,050</span>
-                                    <span class="tours-card-price-note">per person</span>
-                                </div>
-                                <a href="tour.html" class="btn btn-primary btn-sm">View Details</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="tours-card scroll-animate" data-tour="1" data-type="nile" data-days="5"
-                        data-price="1420" data-animation="fadeInUp" data-delay="100">
-                        <div class="tours-card-image">
-                            <img src="assets/desert-safar.jpg" alt="Dahabiya Nile Cruise"
-                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1526481280695-3c687fd543c0?w=800&h=500&fit=crop';" />
-                            <span class="tours-card-badge badge-secondary">Slow Travel</span>
-                        </div>
-                        <div class="tours-card-body">
-                            <div class="tours-card-top">
-                                <span class="tours-card-category">Dahabiya</span>
-                                <span class="tours-card-rating"><i class="fa-solid fa-star"></i> 5.0 (41 reviews)</span>
-                            </div>
-                            <h3 class="tours-card-title">5 Days Intimate Dahabiya Nile Cruise</h3>
-                            <p class="tours-card-text">Boutique sailing boat with only a few cabins — ideal for couples.</p>
-                            <div class="tours-card-meta">
-                                <span><i class="fa-regular fa-clock"></i> 5 Days</span>
-                                <span><i class="fa-solid fa-users"></i> Max 12 guests</span>
-                            </div>
-                            <div class="tours-card-footer">
-                                <div class="tours-card-price">
-                                    <span class="tours-card-price-label">From</span>
-                                    <span class="tours-card-price-main">$1,420</span>
-                                    <span class="tours-card-price-note">per person</span>
-                                </div>
-                                <a href="tour.html" class="btn btn-primary btn-sm">View Details</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Desert & Safari -->
-        <section class="tours-section section-padding" id="desert-tours">
-            <div class="container">
-                <div class="tours-section-header">
-                    <div class="section-label scroll-animate" data-animation="fadeInUp">
-                        <span class="star-icon">✦</span>
-                        <span>DESERT &amp; SAFARI</span>
-                        <span class="star-icon">✦</span>
-                    </div>
-                    <div class="tours-section-heading">
-                        <h2 class="section-title scroll-animate" data-animation="fadeInUp" data-delay="50">
-                            Golden <span class="highlight">Desert Adventures</span>
-                        </h2>
-                     
-                    </div>
-                </div>
-
-                <div class="tours-grid" data-tours-grid>
-                    <article class="tours-card scroll-animate" data-tour="1" data-type="desert" data-days="2"
-                        data-price="340" data-animation="fadeInUp" data-delay="0">
-                        <div class="tours-card-image">
-                            <img src="assets/desert-safar.jpg" alt="White Desert Overnight Safari"
-                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587486913048-54c2b2c7093c?w=800&h=500&fit=crop';" />
-                            <span class="tours-card-badge">Adventure</span>
-                        </div>
-                        <div class="tours-card-body">
-                            <div class="tours-card-top">
-                                <span class="tours-card-category">Desert Safari</span>
-                                <span class="tours-card-rating"><i class="fa-solid fa-star"></i> 4.8 (63 reviews)</span>
-                            </div>
-                            <h3 class="tours-card-title">2 Days White Desert Overnight Safari</h3>
-                            <p class="tours-card-text">
-                                4x4 ride across the Black &amp; White Desert with camp dinner under the stars.
-                            </p>
-                            <div class="tours-card-meta">
-                                <span><i class="fa-regular fa-clock"></i> 2 Days</span>
-                                <span><i class="fa-solid fa-mountain-sun"></i> Adventure</span>
-                            </div>
-                            <div class="tours-card-footer">
-                                <div class="tours-card-price">
-                                    <span class="tours-card-price-label">From</span>
-                                    <span class="tours-card-price-main">$340</span>
-                                    <span class="tours-card-price-note">per person</span>
-                                </div>
-                                <a href="tour.html" class="btn btn-primary btn-sm">View Details</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Red Sea -->
-        <section class="tours-section section-padding" id="redsea-tours">
-            <div class="container">
-                <div class="tours-section-header">
-                    <div class="section-label scroll-animate" data-animation="fadeInUp">
-                        <span class="star-icon">✦</span>
-                        <span>RED SEA &amp; BEACH</span>
-                        <span class="star-icon">✦</span>
-                    </div>
-                    <div class="tours-section-heading">
-                        <h2 class="section-title scroll-animate" data-animation="fadeInUp" data-delay="50">
-                            Colorful <span class="highlight">Red Sea Escapes</span>
-                        </h2>
-                        <p class="section-description scroll-animate" data-animation="fadeInUp" data-delay="100">
-                            Snorkeling, diving and beachfront resorts in Hurghada and beyond.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="tours-grid" data-tours-grid>
-                    <article class="tours-card scroll-animate" data-tour="1" data-type="redsea" data-days="5"
-                        data-price="720" data-animation="fadeInUp" data-delay="0">
-                        <div class="tours-card-image">
-                            <img src="assets/redsea-bg.png" alt="Hurghada Red Sea Escape"
-                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=500&fit=crop';" />
-                            <span class="tours-card-badge">Beach Break</span>
-                        </div>
-                        <div class="tours-card-body">
-                            <div class="tours-card-top">
-                                <span class="tours-card-category">Red Sea</span>
-                                <span class="tours-card-rating"><i class="fa-solid fa-star"></i> 4.7 (72 reviews)</span>
-                            </div>
-                            <h3 class="tours-card-title">5 Days Hurghada Red Sea Escape</h3>
-                            <p class="tours-card-text">
-                                All‑inclusive beachfront resort with optional snorkeling and boat trips.
-                            </p>
-                            <div class="tours-card-meta">
-                                <span><i class="fa-regular fa-clock"></i> 5 Days</span>
-                                <span><i class="fa-solid fa-water"></i> Beach</span>
-                            </div>
-                            <div class="tours-card-footer">
-                                <div class="tours-card-price">
-                                    <span class="tours-card-price-label">From</span>
-                                    <span class="tours-card-price-main">$720</span>
-                                    <span class="tours-card-price-note">per person</span>
-                                </div>
-                                <a href="tour.html" class="btn btn-primary btn-sm">View Details</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <!-- Footer (same as main page) -->
@@ -529,28 +337,24 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="assets/logo.png" alt="Travel Egypt" class="footer-logo-img" />
-                        <span class="logo-text">Travel Egypt</span>
+                        <img src="assets/logo_main.png" alt="Travel Egypt" class="footer-logo-img">
                     </div>
                     <p class="footer-description">
-                        We offer you the best travel experiences in Egypt with trips
-                        designed to discover the wonders of ancient and modern Egypt.
+                        We offer you the best travel experiences in Egypt with trips designed to discover the wonders of
+                        ancient and modern Egypt.
                     </p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Facebook"><i
                                 class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="social-link" aria-label="Instagram"><i
                                 class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="X (Twitter)"><i
-                                class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="index.html#home">Home</a></li>
-                        <li><a href="tours.html#egypt-tours">All Tours</a></li>
+                        <li><a href="index.html#packages">Packages</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="index.html#contact">Contact Us</a></li>
                     </ul>
@@ -558,26 +362,33 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Services</h3>
                     <ul class="footer-links">
-                        <li><a href="tours.html#nile-cruises">Nile Cruises</a></li>
-                        <li><a href="tours.html#redsea-tours">Red Sea &amp; Diving</a></li>
-                        <li><a href="tours.html#desert-tours">Desert &amp; Safari</a></li>
-                        <li><a href="tours.html#egypt-beyond">Multi‑Country Tours</a></li>
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Historical Tours</a></li>
+                        <li><a href="#">Nile Cruises</a></li>
+                        <li><a href="#">Family Trips</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3 class="footer-title">Contact Info</h3>
                     <ul class="footer-contact">
-                        <li><span class="contact-icon"><i class="fa-solid fa-phone"></i></span> +20 (0) 123 456 789</li>
-                        <li><span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
-                            info@travelegypt.com
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Cairo, Egypt</span>
                         </li>
-                        <li><span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span> Cairo, Egypt
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span>+20 123 456 7890</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span>info@travelegypt.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Travel Egypt. All rights reserved.</p>
+                <p>&copy; 2026 <a href="#" class="text-warning text-decoration-none">Travel Egypt</a>. All rights
+                    reserved.</p>
             </div>
         </div>
     </footer>
@@ -588,4 +399,3 @@
 </body>
 
 </html>
-

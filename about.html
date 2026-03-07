@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -22,10 +19,10 @@
     <div class="scroll-progress">
         <div class="scroll-progress-bar" id="scrollProgressBar"></div>
     </div>
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar (same as home) -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top main-navbar">
         <div class="container px-lg-1">
-            <a class="navbar-brand logo d-flex align-items-center gap-2" href="#home">
+            <a class="navbar-brand logo d-flex align-items-center gap-2" href="index.html">
                 <img src="assets/logo_main.png" alt="Logo" class="brand-logo-img" height="70">
             </a>
 
@@ -40,73 +37,51 @@
                         <a class="nav-link" href="index.html#home">Home</a>
                     </li>
 
-                    <!-- 2- Egypt Tours -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#packages" id="navEgyptToursAbout"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navEgyptTours" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Egypt Tours
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navEgyptToursAbout">
-                            <li><a class="dropdown-item" href="index.html#packages">Egypt Tour Packages</a></li>
-                            <li><a class="dropdown-item" href="index.html#desert">Egypt Desert Tours</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navEgyptTours">
+                            <li><a class="dropdown-item" href="tours.html">Egypt Tour Packages</a></li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt Desert Tours</a></li>
                             <li><a class="dropdown-item" href="index.html#redsea">Red Sea Vacations</a></li>
                         </ul>
                     </li>
 
-                    <!-- 3- Nile Cruises -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#cruises" id="navNileCruisesAbout"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navNileCruises" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Nile Cruises
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navNileCruisesAbout">
+                        <ul class="dropdown-menu" aria-labelledby="navNileCruises">
                             <li><a class="dropdown-item" href="index.html#cruises">Nile Cruises</a></li>
                             <li><a class="dropdown-item" href="index.html#cruises">Dahabiya Nile Cruises</a></li>
                         </ul>
                     </li>
 
-                    <!-- 4- Day Excursions -->
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#packages">Day Excursions</a>
                     </li>
 
-                    <!-- 5- Egypt & Beyond -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html#packages" id="navEgyptBeyondAbout"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navEgyptBeyond" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Egypt &amp; Beyond
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navEgyptBeyondAbout">
+                        <ul class="dropdown-menu" aria-labelledby="navEgyptBeyond">
                             <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Jordan Tours</a></li>
-                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Saudi Arabia Tours</a>
-                            </li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Saudi Arabia Tours</a></li>
                         </ul>
                     </li>
 
-                    <!-- About page itself -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="#about-intro">About Us</a>
+                        <a class="nav-link active" href="about.html">About Us</a>
                     </li>
 
-                    <!-- Plan your tours -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Plan Your Tours</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <div class="navbar-social d-flex align-items-center gap-2">
-                            <a href="#" class="navbar-social-link" aria-label="Facebook"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="navbar-social-link" aria-label="Instagram"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class="navbar-social-link" aria-label="X (Twitter)"><i
-                                    class="fa-brands fa-x-twitter"></i></a>
-                        </div>
-                    </li>
-
-                    <!-- <li class="nav-item mt-3 mt-lg-0">
+                    <li class="nav-item mt-3 mt-lg-0">
                         <a class="btn btn-primary px-4" href="index.html#packages">Book Your Trip</a>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </div>
@@ -123,8 +98,19 @@
         </button>
     </div>
 
+    <!-- About Us Banner (full-width colored strip with title) -->
+    <section class="about-banner" id="about-intro">
+        <div class="about-banner-overlay"></div>
+        <div class="container">
+            <div class="about-banner-inner">
+                <h1 class="about-banner-title">About Us</h1>
+                <p class="about-banner-subtitle">Discover who we are and why travelers choose us</p>
+            </div>
+        </div>
+    </section>
+
     <!-- About Hero Section -->
-    <section class="about-hero section-padding" id="about-intro">
+    <section class="about-hero section-padding">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
@@ -225,143 +211,71 @@
     </section>
 
     <!-- Why Travel With Us Section -->
-    <section class="about-values section-padding">
+    <section class="about-values section-padding" id="why-travel-with-us">
         <div class="container">
-            <div class="section-header text-center scroll-animate" data-animation="fadeInUp">
-                <div class="section-label">
-                    <span class="star-icon">✦</span>
-                    <span>WHY TRAVEL WITH US</span>
-                    <span class="star-icon">✦</span>
-                </div>
-                <h2 class="section-title">
-                    Designed Around <span class="highlight">You</span>
+            <div class="about-why-header text-center scroll-animate" data-animation="fadeInUp">
+                <h2 class="about-why-title">
+                    Why <span class="about-why-title-underline">Travel</span> With Us?
                 </h2>
-                <p class="section-description">
-                    We blend local insight, premium service, and flexible planning to create journeys that feel
-                    effortless from the first message until you return home.
-                </p>
             </div>
 
-            <div class="about-values-grid">
+            <div class="about-values-grid about-values-grid--four">
                 <div class="about-value-card scroll-animate" data-animation="fadeInUp" data-delay="0">
-                    <div class="about-value-icon">
-                        <i class="fa-solid fa-map-location-dot"></i>
+                    <div class="about-value-icon about-value-icon--blue">
+                        <i class="fa-solid fa-globe"></i>
                     </div>
-                    <h3 class="about-value-title">Tailor‑Made Itineraries</h3>
+                    <h3 class="about-value-title">Global Reach</h3>
                     <p class="about-value-text">
-                        Every trip is built from scratch around your dates, budget, and travel style —
-                        no copy‑paste packages.
+                        Serving travelers from USA, UK, Australia &amp; worldwide with seamless booking and support.
                     </p>
                 </div>
 
                 <div class="about-value-card scroll-animate" data-animation="fadeInUp" data-delay="100">
-                    <div class="about-value-icon">
-                        <i class="fa-solid fa-hands-holding-circle"></i>
-                    </div>
-                    <h3 class="about-value-title">End‑to‑End Support</h3>
+                    <div class="about-value-icon about-value-icon--gold about-value-icon--check" aria-hidden="true"></div>
+                    <h3 class="about-value-title">Expert Guides</h3>
                     <p class="about-value-text">
-                        From visa guidance to airport pick‑ups and last‑minute changes, our team is by your side 24/7.
+                        Professional Egyptologist guides for every journey — history, culture, and hidden gems.
                     </p>
                 </div>
 
                 <div class="about-value-card scroll-animate" data-animation="fadeInUp" data-delay="200">
-                    <div class="about-value-icon">
-                        <i class="fa-solid fa-earth-africa"></i>
+                    <div class="about-value-icon about-value-icon--green">
+                        <i class="fa-solid fa-clock"></i>
                     </div>
-                    <h3 class="about-value-title">Responsible Travel</h3>
+                    <h3 class="about-value-title">24/7 Support</h3>
                     <p class="about-value-text">
-                        We partner with local communities, licensed guides, and eco‑conscious suppliers to keep Egypt’s
-                        treasures thriving.
+                        Local support ensuring a seamless travel experience from arrival to departure.
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Planning Steps CTA -->
-    <section class="about-steps section-padding">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="about-section-title scroll-animate" data-animation="fadeInUp">
-                        How We Plan Your <span class="highlight">Perfect Trip</span>
-                    </h2>
-                    <p class="about-section-text scroll-animate" data-animation="fadeInUp" data-delay="100">
-                        Whether you’re dreaming of a romantic Nile cruise, a family Red Sea escape, or a deep‑dive
-                        into ancient history, our process keeps everything simple and transparent.
-                    </p>
-                    <ul class="about-steps-list scroll-animate" data-animation="fadeInUp" data-delay="200">
-                        <li>
-                            <span class="about-step-number">01</span>
-                            <div class="about-step-content">
-                                <strong>Listen</strong>
-                                <span>We start with a quick call or message to understand your ideas and
-                                    preferences.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="about-step-number">02</span>
-                            <div class="about-step-content">
-                                <strong>Design</strong>
-                                <span>Our travel designers craft 1–2 custom itineraries with hotels, cruises, and
-                                    activities.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="about-step-number">03</span>
-                            <div class="about-step-content">
-                                <strong>Refine</strong>
-                                <span>We fine‑tune every detail together until you feel 100% confident.</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="about-step-number">04</span>
-                            <div class="about-step-content">
-                                <strong>Travel</strong>
-                                <span>Relax while our on‑the‑ground team takes care of everything during your
-                                    stay.</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-steps-card scroll-animate" data-animation="fadeInUp" data-delay="150">
-                        <h3>Ready to Start Planning?</h3>
-                        <p>
-                            Share a few details about your dream trip and we’ll respond with ideas and a first draft
-                            itinerary within 24 hours.
-                        </p>
-                        <div class="about-steps-actions">
-                            <a href="index.html#contact" class="btn btn-primary">Contact Our Team</a>
-                            <a href="index.html#packages" class="btn btn-outline">View Sample Packages</a>
-                        </div>
+                <div class="about-value-card scroll-animate" data-animation="fadeInUp" data-delay="300">
+                    <div class="about-value-icon about-value-icon--blue">
+                        <i class="fa-solid fa-location-dot"></i>
                     </div>
+                    <h3 class="about-value-title">Handpicked</h3>
+                    <p class="about-value-text">
+                        Carefully selected hotels and luxury Nile cruises for comfort and authenticity.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (same as main page) -->
+
+    <!-- Footer (same as home) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="assets/logo.png" alt="Travel Egypt" class="footer-logo-img">
-                        <span class="logo-text">Travel Egypt</span>
+                        <img src="assets/logo_main.png" alt="Travel Egypt" class="footer-logo-img">
                     </div>
                     <p class="footer-description">
-                        We offer you the best travel experiences in Egypt with trips designed to discover the wonders of
-                        ancient and modern Egypt.
+                        We offer you the best travel experiences in Egypt with trips designed to discover the wonders of ancient and modern Egypt.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Instagram"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="X (Twitter)"><i
-                                class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -376,10 +290,10 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Services</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html#cruises">Nile Cruises</a></li>
-                        <li><a href="index.html#redsea">Red Sea &amp; Diving</a></li>
-                        <li><a href="index.html#packages">Desert &amp; Safari</a></li>
-                        <li><a href="#">Custom Packages</a></li>
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Historical Tours</a></li>
+                        <li><a href="#">Nile Cruises</a></li>
+                        <li><a href="#">Family Trips</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -401,7 +315,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Travel Egypt. All rights reserved.</p>
+                <p>&copy; 2026 <a href="#" class="text-warning text-decoration-none">Travel Egypt</a>. All rights reserved.</p>
             </div>
         </div>
     </footer>

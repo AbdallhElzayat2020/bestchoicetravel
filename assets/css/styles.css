@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Cairo:wght@200..1000&display=swap');
+
 /* Color Variables - brand palette (yellow + blue from logo) */
 :root {
     /* Brand Colors */
@@ -50,7 +52,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Cairo", sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
     padding: 0;
@@ -263,6 +265,7 @@ html {
 .navbar.bg-body-tertiary {
     background-color: rgba(248, 249, 250, 0.96) !important;
     box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+    border-bottom: 1px solid rgba(43, 83, 167, 0.12);
     z-index: 1030 !important;
 }
 
@@ -484,7 +487,7 @@ html {
 }
 
 .hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Cairo", sans-serif;
     font-size: 72px;
     font-weight: 700;
     margin-bottom: 25px;
@@ -837,7 +840,7 @@ html {
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Cairo", sans-serif;
     font-size: 52px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -1241,6 +1244,181 @@ html {
     z-index: 1;
 }
 
+/* Nile Cruises: header block (title + description + cover image) */
+.cruises-header-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+.cruises-header-content {
+    padding-right: 24px;
+}
+
+.cruises-cover {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+}
+
+.cruises-cover-image {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Nile Cruises: 3-col cards grid (no ratings) */
+.cruise-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.cruise-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(148, 163, 184, 0.25);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cruise-card:hover {
+    box-shadow: 0 24px 56px rgba(148, 163, 184, 0.3);
+    transform: translateY(-4px);
+}
+
+.cruise-card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.cruise-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.cruise-card:hover .cruise-card-image img {
+    transform: scale(1.06);
+}
+
+.cruise-card-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+}
+
+.cruise-card-badge--blue {
+    background: var(--brand-blue);
+}
+
+.cruise-card-location {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    background: rgba(15, 23, 42, 0.75);
+}
+
+.cruise-card-location i {
+    margin-right: 4px;
+}
+
+.cruise-card-body {
+    padding: 22px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.cruise-card-price-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.cruise-card-price {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--brand-blue);
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.cruise-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 6px 0;
+    line-height: 1.35;
+}
+
+.cruise-card-text {
+    font-size: 14px;
+    color: var(--text-medium);
+    line-height: 1.65;
+    margin: 0 0 8px 0;
+}
+
+.cruise-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: auto;
+}
+
+.cruise-card-meta i {
+    margin-right: 6px;
+}
+
+.cruise-card-btn {
+    display: block;
+    margin-top: 14px;
+    padding: 12px 0;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--brand-blue-dark);
+    text-decoration: none;
+    border-bottom: 2px solid var(--brand-blue);
+    text-align: center;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.cruise-card-btn:hover {
+    color: var(--brand-blue);
+    background: rgba(43, 83, 167, 0.06);
+}
+
 /* Red Sea Experience Section */
 .redsea-section {
     background-image: url('../red-sea.jpg');
@@ -1627,7 +1805,7 @@ html {
 }
 
 .cruises-title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Cairo", sans-serif;
     font-size: 52px;
     font-weight: 700;
     color: var(--text-dark);
@@ -1835,7 +2013,7 @@ html {
 }
 
 .footer-logo .logo-text {
-    font-family: 'Playfair Display', serif;
+    font-family: "Cairo", sans-serif;
     color: var(--brand-yellow);
 }
 
@@ -1894,14 +2072,15 @@ html {
 }
 
 .footer-links a {
+    display: inline-block;
     color: rgba(226, 232, 240, 0.9);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.25s ease;
 }
 
 .footer-links a:hover {
     color: var(--brand-yellow);
-    padding-left: 5px;
+    transform: translateX(6px);
 }
 
 .footer-contact {
@@ -2083,6 +2262,25 @@ html {
         gap: 40px;
     }
 
+    .cruises-header-block {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 40px;
+    }
+
+    .cruises-header-content {
+        padding-right: 0;
+    }
+
+    .cruises-cover-image {
+        height: 280px;
+    }
+
+    .cruise-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
     .cruises-main-image {
         height: 400px;
     }
@@ -2102,6 +2300,24 @@ html {
     .btn-outline {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .cruise-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cruises-cover-image {
+        height: 220px;
+    }
+
+    .cruise-card-price {
+        font-size: 24px;
+    }
+
+    .cruise-card-title {
+        font-size: 16px;
     }
 }
 
@@ -2801,8 +3017,63 @@ body.modal-open {
 }
 
 /* About Page */
+
+/* About Us full-width banner (image background + title) */
+.about-banner {
+    position: relative;
+    padding: 160px 0 120px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    background-image: url('../about.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-banner-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+
+    background: #000;
+    pointer-events: none;
+}
+
+.about-banner .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.about-banner-inner {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-banner-title {
+    font-family: "Cairo", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.about-banner-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0;
+}
+
 .about-hero {
-    padding-top: 140px;
+    padding-top: 80px;
     background: radial-gradient(circle at top left, rgba(248, 230, 0, 0.1) 0%, transparent 55%), #f5f2ed;
 }
 
@@ -2822,7 +3093,7 @@ body.modal-open {
 }
 
 .about-hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Cairo", sans-serif;
     font-size: 44px;
     font-weight: 700;
     color: var(--text-dark);
@@ -2880,39 +3151,56 @@ body.modal-open {
 
 .about-hero-badge-card {
     position: absolute;
-    bottom: 18px;
-    left: 18px;
+    bottom: 20px;
+    left: 20px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+    gap: 12px;
+    padding: 12px 18px 12px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-hero-badge-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
 }
 
 .about-hero-badge-icon {
-    width: 26px;
-    height: 26px;
-    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(250, 204, 21, 0.9);
+    background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--brand-yellow-dark) 100%);
     color: #111827;
-    font-size: 14px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(248, 230, 0, 0.4);
+}
+
+.about-hero-badge-text {
+    line-height: 1.35;
 }
 
 .about-hero-badge-text strong {
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--text-dark);
+    margin-bottom: 2px;
 }
 
 .about-hero-badge-text span {
+    display: block;
     font-size: 11px;
     color: var(--text-light);
+    letter-spacing: 0.02em;
 }
 
 .about-hero-floating-card {
@@ -3031,34 +3319,80 @@ body.modal-open {
 .about-stats-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: 18px;
 }
 
 .about-stat-card {
     background: #ffffff;
-    border-radius: 18px;
-    padding: 18px 18px 16px;
-    box-shadow: 0 16px 40px rgba(148, 163, 184, 0.35);
-    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 20px;
+    padding: 22px 20px 20px;
+    box-shadow: 0 12px 32px rgba(148, 163, 184, 0.22);
+    border: 1px solid rgba(43, 83, 167, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.about-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(43, 83, 167, 0.18);
+    border-color: rgba(43, 83, 167, 0.2);
 }
 
 .about-stat-number {
     display: block;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 800;
     color: var(--brand-blue);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    line-height: 1.2;
 }
 
 .about-stat-label {
     font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.12em;
     color: var(--text-light);
+    line-height: 1.4;
+}
+
+.about-stat-card:hover .about-stat-number {
+    color: var(--brand-blue-dark);
+}
+
+.about-stat-card:hover .about-stat-label {
+    color: var(--text-medium);
 }
 
 .about-values {
-    background: #f5f2ed;
+    background: #ffffff;
+}
+
+/* Why Travel With Us — title with golden underline */
+.about-why-header {
+    margin-bottom: 40px;
+}
+
+.about-why-title {
+    font-family: "Cairo", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--brand-blue);
+    margin: 0;
+}
+
+.about-why-title-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.about-why-title-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    height: 4px;
+    background: linear-gradient(90deg, #b45309, #d97706);
+    border-radius: 2px;
 }
 
 .about-values-grid {
@@ -3068,37 +3402,85 @@ body.modal-open {
     margin-top: 34px;
 }
 
+.about-values-grid--four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+}
+
 .about-value-card {
     background: #ffffff;
-    border-radius: 22px;
-    padding: 24px 22px;
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
 }
 
 .about-value-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 16px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(43, 83, 167, 0.08);
-    color: var(--brand-blue);
-    margin-bottom: 10px;
+    margin: 0 auto 16px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.about-value-icon i {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900;
+    font-size: 1em;
+}
+
+.about-value-icon--blue {
+    background: var(--brand-blue);
+}
+
+.about-value-icon--gold {
+    background: linear-gradient(135deg, #b45309, #d97706);
+}
+
+.about-value-icon--check::before {
+    content: '\2713';
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.about-value-icon--green {
+    background: linear-gradient(135deg, #059669, #10b981);
 }
 
 .about-value-title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 6px;
+    color: var(--brand-blue);
+    margin-bottom: 8px;
 }
 
 .about-value-text {
     font-size: 14px;
     color: var(--text-medium);
     line-height: 1.7;
+    margin: 0;
+}
+
+/* Legacy 3-col grid icon (no modifier) */
+.about-values-grid:not(.about-values-grid--four) .about-value-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 16px;
+    background: rgba(43, 83, 167, 0.08);
+    color: var(--brand-blue);
+    margin-bottom: 10px;
 }
 
 .about-steps {
@@ -3169,8 +3551,39 @@ body.modal-open {
         padding-top: 120px;
     }
 
+    .about-banner-title {
+        font-size: 38px;
+    }
+
     .about-values-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-values-grid--four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-why-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-banner {
+        padding: 120px 0 80px;
+        min-height: 38vh;
+    }
+
+    .about-banner-title {
+        font-size: 32px;
+    }
+
+    .about-values-grid--four {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-why-title {
+        font-size: 26px;
     }
 }
 
@@ -3188,7 +3601,7 @@ body.modal-open {
 }
 
 .tours-hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Cairo", sans-serif;
     font-size: 40px;
     font-weight: 700;
     color: var(--text-dark);
@@ -3661,7 +4074,7 @@ body.modal-open {
 }
 
 .tour-title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Cairo", sans-serif;
     font-size: 40px;
     font-weight: 700;
     color: var(--text-dark);
