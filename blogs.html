@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Egypt Blog - Stories & Guides</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Cairo:wght@200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top main-navbar">
+        <div class="container px-lg-1">
+            <a class="navbar-brand logo d-flex align-items-center gap-2" href="index.html#home">
+                <img src="assets/logo_main.png" alt="Logo" class="brand-logo-img" height="70">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navEgyptTours" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Egypt Tours
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navEgyptTours">
+                            <li><a class="dropdown-item" href="tours.html">Egypt Tour Packages</a></li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt Desert Tours</a></li>
+                            <li><a class="dropdown-item" href="index.html#redsea">Red Sea Vacations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navNileCruises" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Nile Cruises
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navNileCruises">
+                            <li><a class="dropdown-item" href="index.html#cruises">Nile Cruises</a></li>
+                            <li><a class="dropdown-item" href="index.html#cruises">Dahabiya Nile Cruises</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#packages">Day Excursions</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navEgyptBeyond" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Egypt &amp; Beyond
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navEgyptBeyond">
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Jordan Tours</a></li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Saudi Arabia Tours</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blogs.html">Blog</a>
+                    </li>
+                    <li class="nav-item mt-3 mt-lg-0">
+                        <a class="btn btn-primary px-4" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating actions (WhatsApp + Scroll to top) -->
+    <div class="floating-actions">
+        <a href="https://wa.me/201234567890" target="_blank" rel="noopener"
+            class="floating-btn floating-btn--whatsapp" id="whatsappBtn" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button type="button" class="floating-btn floating-btn--scrolltop" id="scrollTopBtn"
+            aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Blog Listing Page -->
+    <main class="blogs-page">
+        <!-- Hero / intro -->
+        <section class="blogs-hero section-padding">
+            <div class="container">
+                <div class="blogs-hero-inner">
+                    <div class="section-label scroll-animate" data-animation="fadeInUp">
+                        <span class="star-icon">✦</span>
+                        <span>TRAVEL EGYPT BLOG</span>
+                        <span class="star-icon">✦</span>
+                    </div>
+                    <h1 class="blogs-hero-title scroll-animate" data-animation="fadeInUp" data-delay="50">
+                        Stories, Guides &amp; <span class="highlight">Travel Tips</span>
+                    </h1>
+                    <p class="blogs-hero-subtitle scroll-animate" data-animation="fadeInUp" data-delay="100">
+                        Inspiration and practical advice to help you plan your next journey across Egypt –
+                        from Cairo and the Nile to the Red Sea and beyond.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog list + sidebar -->
+        <section class="blogs-main section-padding">
+            <div class="container">
+                <div class="blogs-layout">
+                    <!-- Left: blog cards -->
+                    <div class="blogs-list">
+                        <article class="blog-card scroll-animate" data-animation="fadeInUp" data-delay="0">
+                            <div class="blog-card-image">
+                                <img src="assets/image.png" alt="Nile Cruise Guide">
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-card-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> Mar 10, 2026</span>
+                                    <span><i class="fa-solid fa-tag"></i> Nile Cruises</span>
+                                    <span><i class="fa-regular fa-user"></i> Travel Egypt Team</span>
+                                </div>
+                                <h2 class="blog-card-title">
+                                    How to Choose the Perfect Nile Cruise Itinerary
+                                </h2>
+                                <p class="blog-card-excerpt">
+                                    Unsure whether to sail 3, 4 or 7 nights? We break down the
+                                    classic routes between Luxor and Aswan and the key temples you
+                                    shouldn’t miss.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-btn">
+                                    Read More
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card scroll-animate" data-animation="fadeInUp" data-delay="100">
+                            <div class="blog-card-image">
+                                <img src="assets/Luxor.webp" alt="Luxor Highlights">
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-card-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> Mar 02, 2026</span>
+                                    <span><i class="fa-solid fa-tag"></i> Cairo &amp; Luxor</span>
+                                    <span><i class="fa-regular fa-user"></i> Sister Nourhan</span>
+                                </div>
+                                <h2 class="blog-card-title">
+                                    5 Essential Tips Before Your First Trip to Luxor
+                                </h2>
+                                <p class="blog-card-excerpt">
+                                    From the best time of day to visit the Valley of the Kings to how
+                                    to avoid the crowds at Karnak Temple, here’s how to see Luxor like a pro.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-btn">
+                                    Read More
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card scroll-animate" data-animation="fadeInUp" data-delay="150">
+                            <div class="blog-card-image">
+                                <img src="assets/red-sea.jpg" alt="Red Sea Snorkeling">
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-card-meta">
+                                    <span><i class="fa-regular fa-calendar"></i> Feb 20, 2026</span>
+                                    <span><i class="fa-solid fa-tag"></i> Red Sea</span>
+                                    <span><i class="fa-regular fa-user"></i> Travel Egypt Team</span>
+                                </div>
+                                <h2 class="blog-card-title">
+                                    Red Sea Snorkeling: Best Spots for First‑Time Visitors
+                                </h2>
+                                <p class="blog-card-excerpt">
+                                    Discover our favourite house reefs and day‑trip islands for
+                                    colourful corals, calm waters and family‑friendly snorkelling.
+                                </p>
+                                <a href="blog-details.html" class="blog-card-btn">
+                                    Read More
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Right: sidebar -->
+                    <aside class="blogs-sidebar">
+                        <div class="blog-sidebar-card blog-sidebar-search scroll-animate" data-animation="fadeInUp"
+                            data-delay="0">
+                            <h3 class="blog-sidebar-title">Search</h3>
+                            <div class="blog-search-box">
+                                <input type="text" placeholder="Search articles..." aria-label="Search blog">
+                                <button type="button" aria-label="Search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="blog-sidebar-card scroll-animate" data-animation="fadeInUp" data-delay="50">
+                            <h3 class="blog-sidebar-title">Categories</h3>
+                            <ul class="blog-category-list">
+                                <li class="active"><span class="dot"></span> All Articles</li>
+                                <li><span class="dot"></span> Nile Cruises</li>
+                                <li><span class="dot"></span> Cairo &amp; Pyramids</li>
+                                <li><span class="dot"></span> Red Sea &amp; Diving</li>
+                                <li><span class="dot"></span> Desert &amp; Safari</li>
+                            </ul>
+                        </div>
+
+                        <div class="blog-sidebar-card scroll-animate" data-animation="fadeInUp" data-delay="100">
+                            <h3 class="blog-sidebar-title">Need Help?</h3>
+                            <p class="blog-sidebar-text">
+                                Not sure which itinerary fits you best? Our travel designers can
+                                recommend the perfect tour based on your dates and interests.
+                            </p>
+                            <a href="contact.html" class="blog-sidebar-cta">
+                                Contact our team
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo_main.png" alt="Travel Egypt" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">
+                        We offer you the best travel experiences in Egypt with trips designed to discover the wonders of
+                        ancient and modern Egypt.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#packages">Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Historical Tours</a></li>
+                        <li><a href="#">Nile Cruises</a></li>
+                        <li><a href="#">Family Trips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Cairo, Egypt</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span>+20 123 456 7890</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span>info@travelegypt.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <a href="#" class="text-warning text-decoration-none">Travel Egypt</a>. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
+

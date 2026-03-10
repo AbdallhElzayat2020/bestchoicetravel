@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details - Travel Egypt</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Cairo:wght@200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top main-navbar">
+        <div class="container px-lg-1">
+            <a class="navbar-brand logo d-flex align-items-center gap-2" href="index.html#home">
+                <img src="assets/logo_main.png" alt="Logo" class="brand-logo-img" height="70">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navEgyptTours" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Egypt Tours
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navEgyptTours">
+                            <li><a class="dropdown-item" href="tours.html">Egypt Tour Packages</a></li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt Desert Tours</a></li>
+                            <li><a class="dropdown-item" href="index.html#redsea">Red Sea Vacations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navNileCruises" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Nile Cruises
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navNileCruises">
+                            <li><a class="dropdown-item" href="index.html#cruises">Nile Cruises</a></li>
+                            <li><a class="dropdown-item" href="index.html#cruises">Dahabiya Nile Cruises</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#packages">Day Excursions</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navEgyptBeyond" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Egypt &amp; Beyond
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navEgyptBeyond">
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Jordan Tours</a></li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Saudi Arabia Tours</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blogs.html">Blog</a>
+                    </li>
+                    <li class="nav-item mt-3 mt-lg-0">
+                        <a class="btn btn-primary px-4" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating actions (WhatsApp + Scroll to top) -->
+    <div class="floating-actions">
+        <a href="https://wa.me/201234567890" target="_blank" rel="noopener"
+            class="floating-btn floating-btn--whatsapp" id="whatsappBtn" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button type="button" class="floating-btn floating-btn--scrolltop" id="scrollTopBtn"
+            aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Blog details hero -->
+    <main class="blog-details-page">
+        <section class="blog-details-hero section-padding">
+            <div class="container">
+                <div class="blog-details-breadcrumb scroll-animate" data-animation="fadeInUp">
+                    <a href="index.html#home">Home</a>
+                    <span>/</span>
+                    <a href="blogs.html">Blog</a>
+                    <span>/</span>
+                    <span>How to Choose the Perfect Nile Cruise Itinerary</span>
+                </div>
+
+                <article class="blog-details-hero-card scroll-animate" data-animation="fadeInUp" data-delay="50">
+                    <div class="blog-details-hero-image">
+                        <img src="assets/Nile-Cruise.webp" alt="Nile Cruise Itinerary Guide">
+                    </div>
+                    <div class="blog-details-hero-body">
+                        <div class="blog-card-meta blog-card-meta--hero">
+                            <span><i class="fa-regular fa-calendar"></i> Mar 10, 2026</span>
+                            <span><i class="fa-solid fa-tag"></i> Nile Cruises</span>
+                            <span><i class="fa-regular fa-user"></i> Travel Egypt Team</span>
+                        </div>
+                        <h1 class="blog-details-title">
+                            How to Choose the Perfect Nile Cruise Itinerary
+                        </h1>
+                        <p class="blog-details-intro">
+                            Not all Nile cruises are the same. In this guide, we compare the classic routes between
+                            Luxor and Aswan, how many nights you really need on board, and what to look for when
+                            picking your ship.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog content + sidebar -->
+        <section class="blog-details-main section-padding">
+            <div class="container">
+                <div class="blog-details-layout">
+                    <article class="blog-details-content scroll-animate" data-animation="fadeInUp" data-delay="0">
+                        <h2>3, 4 or 7 Nights – What’s the Difference?</h2>
+                        <p>
+                            Most Nile cruises sail between Luxor and Aswan, with stops at temples such as Kom Ombo,
+                            Edfu and Philae. The main difference is how much time you have on board and how relaxed
+                            the pace feels.
+                        </p>
+                        <p>
+                            A <strong>3‑night cruise</strong> typically focuses on the key highlights and is perfect if
+                            you’re combining the Nile with Cairo and the Red Sea. A <strong>4‑night cruise</strong>
+                            adds more time on the sun deck and slower sailing hours. A <strong>7‑night cruise</strong>
+                            is ideal if you want a floating hotel experience with more time to unwind between tours.
+                        </p>
+
+                        <h3>When Is the Best Time to Cruise the Nile?</h3>
+                        <p>
+                            The most comfortable months are from <strong>October to April</strong> when daytime
+                            temperatures are mild and evenings are cool. Summer sailings are still possible but expect
+                            higher heat in the middle of the day and plan temple visits very early or late.
+                        </p>
+
+                        <blockquote class="blog-quote">
+                            <p>
+                                “Our favourite itineraries start in Luxor and finish in Aswan, giving you golden‑hour
+                                views of the river and time to explore Nubian culture at the end of your journey.”
+                            </p>
+                        </blockquote>
+
+                        <h3>What to Look For in a Cruise Ship</h3>
+                        <ul>
+                            <li><strong>Cabin size &amp; windows:</strong> look for full‑length windows or a balcony
+                                for the best Nile views.</li>
+                            <li><strong>Included sightseeing:</strong> check which temples and sites are covered in the
+                                program.</li>
+                            <li><strong>On‑board dining:</strong> ask about set menus vs. buffets and dietary options.
+                            </li>
+                            <li><strong>Group size:</strong> smaller groups usually mean more personalised guiding and
+                                easier logistics.</li>
+                        </ul>
+
+                        <p>
+                            At Travel Egypt Tours, we work only with vetted 5★ and boutique ships, and we match each
+                            guest with the sailing that fits their travel style, budget and pace.
+                        </p>
+                    </article>
+
+                    <aside class="blogs-sidebar blog-details-sidebar">
+                        <div class="blog-sidebar-card blog-sidebar-search scroll-animate" data-animation="fadeInUp"
+                            data-delay="0">
+                            <h3 class="blog-sidebar-title">Search</h3>
+                            <div class="blog-search-box">
+                                <input type="text" placeholder="Search articles..." aria-label="Search blog">
+                                <button type="button" aria-label="Search">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="blog-sidebar-card scroll-animate" data-animation="fadeInUp" data-delay="50">
+                            <h3 class="blog-sidebar-title">Recent Articles</h3>
+                            <ul class="blog-recent-list">
+                                <li>
+                                    <a href="blog-details.html">
+                                        5 Essential Tips Before Your First Trip to Luxor
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blog-details.html">
+                                        Red Sea Snorkeling: Best Spots for First‑Time Visitors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blog-details.html">
+                                        What to Pack for an Egypt Tour in Winter
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/logo_main.png" alt="Travel Egypt" class="footer-logo-img">
+                    </div>
+                    <p class="footer-description">
+                        We offer you the best travel experiences in Egypt with trips designed to discover the wonders of
+                        ancient and modern Egypt.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#packages">Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cultural Tours</a></li>
+                        <li><a href="#">Historical Tours</a></li>
+                        <li><a href="#">Nile Cruises</a></li>
+                        <li><a href="#">Family Trips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span>Cairo, Egypt</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span>+20 123 456 7890</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span>info@travelegypt.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <a href="#" class="text-warning text-decoration-none">Travel Egypt</a>. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
+
