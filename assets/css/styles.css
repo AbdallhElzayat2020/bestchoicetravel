@@ -3090,6 +3090,13 @@ body.modal-open {
     justify-content: center;
 }
 
+.review-badge-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 .review-badge-logo-text {
     font-size: 12px;
     font-weight: 700;
