@@ -1427,7 +1427,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    min-height: 90vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     color: #ffffff;
