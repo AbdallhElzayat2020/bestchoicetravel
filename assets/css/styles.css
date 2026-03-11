@@ -2574,6 +2574,11 @@ html {
         gap: 40px;
     }
 
+    /* Override higher-specificity rule on small screens */
+    #egypt-jordan .desert-inner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .desert-content-col {
         margin-left: 0;
         max-width: 100%;
@@ -2581,6 +2586,15 @@ html {
 
     .desert-image {
         height: 360px;
+    }
+
+    /* On smaller screens, show image first then content */
+    #egypt-jordan .desert-image-col {
+        order: 1;
+    }
+
+    #egypt-jordan .desert-content-col {
+        order: 2;
     }
 }
 
@@ -2591,6 +2605,28 @@ html {
 
     .desert-title {
         font-size: 32px;
+    }
+
+    .desert-inner {
+        gap: 28px;
+    }
+
+    .desert-image-wrapper {
+        border-radius: 22px;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .desert-image {
+        height: 300px;
+        transform: scale(1.02);
+    }
+
+    .desert-description {
+        margin-bottom: 18px;
+    }
+
+    .desert-feature-list {
+        margin-bottom: 20px;
     }
 
     .desert-cta {
