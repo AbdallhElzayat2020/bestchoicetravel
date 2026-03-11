@@ -1434,6 +1434,11 @@ html {
     overflow: hidden;
 }
 
+/* Variant for Egypt Day Tours (uses museum/city image) */
+.redsea-section--daytours {
+    background-image: url('../images/Egypt_Day_Tours.jpeg');
+}
+
 .redsea-bg {
     position: absolute;
     background: linear-gradient(
