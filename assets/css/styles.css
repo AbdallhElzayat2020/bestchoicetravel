@@ -664,6 +664,15 @@ html {
     padding: 10px 24px;
     font-size: 14px;
     border-radius: 10px;
+    background: #C47A2C;
+    border-color: #C47A2C;
+    box-shadow: 0 8px 24px rgba(196, 122, 44, 0.45);
+}
+
+.main-navbar .btn-primary:hover {
+    background: #A8641F;
+    border-color: #A8641F;
+    box-shadow: 0 10px 28px rgba(168, 100, 31, 0.5);
 }
 
 .btn-primary {
@@ -1427,7 +1436,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     color: #ffffff;
