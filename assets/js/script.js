@@ -58,6 +58,29 @@ if (document.querySelector('.packages-carousel')) {
     });
 }
 
+// Review badges Swiper (trust logos)
+if (document.querySelector('.review-badges-carousel')) {
+    // eslint-disable-next-line no-unused-vars
+    const reviewBadgesSwiper = new Swiper('.review-badges-carousel', {
+        slidesPerView: 2.2,
+        spaceBetween: 18,
+        loop: true,
+        speed: 600,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 3.2,
+            },
+            1024: {
+                slidesPerView: 4.2,
+            },
+        },
+    });
+}
+
 // Testimonials Swiper
 if (document.querySelector('.testimonials-carousel')) {
     // eslint-disable-next-line no-unused-vars
