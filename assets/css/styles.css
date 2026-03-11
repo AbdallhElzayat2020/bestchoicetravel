@@ -52,7 +52,8 @@
 }
 
 body {
-    font-family: "Cairo", sans-serif;
+    font-family: 'Playfair Display', serif;
+
     background-color: var(--bg-light);
     color: var(--text-dark);
     padding: 0;
@@ -840,7 +841,7 @@ html {
 }
 
 .section-title {
-    font-family: "Cairo", sans-serif;
+    font-family: "Playfair Display", serif;
     font-size: 52px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -3105,7 +3106,7 @@ body.modal-open {
 }
 
 .blogs-hero-title {
-    font-family: "Cairo", sans-serif;
+    font-family: "Playfair Display", serif;
     font-size: 40px;
     font-weight: 700;
     color: var(--text-dark);
@@ -3199,6 +3200,7 @@ body.modal-open {
 }
 
 .blog-card-title {
+    font-family: "Playfair Display", serif;
     font-size: 18px;
     font-weight: 700;
     color: var(--text-dark);
@@ -3407,6 +3409,7 @@ body.modal-open {
 }
 
 .blog-details-title {
+    font-family: "Playfair Display", serif;
     font-size: 30px;
     font-weight: 800;
     color: var(--text-dark);
