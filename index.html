@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,14 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Cairo:wght@200..1000&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Cairo:wght@200..1000&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
+
 <body>
     <!-- Scroll progress bar -->
     <div class="scroll-progress">
@@ -38,8 +44,8 @@
 
                     <!-- 2- Egypt Tours -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navEgyptTours" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navEgyptTours" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Egypt Tours
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navEgyptTours">
@@ -51,8 +57,8 @@
 
                     <!-- 3- Nile Cruises -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navNileCruises" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navNileCruises" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Nile Cruises
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navNileCruises">
@@ -68,14 +74,20 @@
 
                     <!-- 5- Egypt & Beyond -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navEgyptBeyond" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navEgyptBeyond" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Egypt &amp; Beyond
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navEgyptBeyond">
                             <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Jordan Tours</a></li>
-                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Saudi Arabia Tours</a></li>
+                            <li><a class="dropdown-item" href="index.html#packages">Egypt &amp; Saudi Arabia Tours</a>
+                            </li>
                         </ul>
+                    </li>
+
+                    <!-- 6- About Us -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blog</a>
                     </li>
 
                     <!-- 6- About Us -->
@@ -83,14 +95,11 @@
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
 
-                        <!-- 6- About Us -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="blogs.html">Blog</a>
-                        </li>
+
 
                     <!-- 7- Contact Us -->
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
 
                     <li class="nav-item mt-3 mt-lg-0">
@@ -101,23 +110,23 @@
         </div>
     </nav>
 
-        <!-- Floating actions (WhatsApp + Scroll to top) -->
-        <div class="floating-actions">
-            <a href="https://wa.me/201234567890" target="_blank" rel="noopener" class="floating-btn floating-btn--whatsapp"
-                id="whatsappBtn" aria-label="Chat on WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <button type="button" class="floating-btn floating-btn--scrolltop" id="scrollTopBtn"
-                aria-label="Scroll to top">
-                <i class="fa-solid fa-arrow-up"></i>
-            </button>
-        </div>
+    <!-- Floating actions (WhatsApp + Scroll to top) -->
+    <div class="floating-actions">
+        <a href="https://wa.me/201234567890" target="_blank" rel="noopener" class="floating-btn floating-btn--whatsapp"
+            id="whatsappBtn" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button type="button" class="floating-btn floating-btn--scrolltop" id="scrollTopBtn" aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
 
     <!-- Home/Hero Section -->
     <section class="hero-section section-padding" id="home">
         <div class="hero-image">
             <!-- ضع صورتك في assets/hero-bg.png أو اترك الرابط الحالي -->
-            <img src="assets/hero-bg.png" alt="Egypt Pyramids" loading="eager" class="hero-bg-image" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=90';">
+            <img src="assets/hero-bg.png" alt="Egypt Pyramids" loading="eager" class="hero-bg-image"
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=90';">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-darkening-overlay"></div>
@@ -133,7 +142,7 @@
                     <div class="hero-buttons scroll-animate" data-animation="fadeInUp" data-delay="400">
                         <a href="#packages" class="btn btn-primary">Egypt Tours</a>
                     </div>
-                 
+
                 </div>
             </div>
         </div>
@@ -167,7 +176,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Aswan Nubian Culture" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Aswan Nubian Culture" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>ASWAN</span>
@@ -204,7 +215,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Pyramids Cairo" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Pyramids Cairo" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1539650116574-75c0c6d73a6e?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>GIZA, CAIRO</span>
@@ -241,7 +254,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Nile Cruise" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Nile Cruise" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>NILE RIVER</span>
@@ -278,7 +293,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Red Sea Diving" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Red Sea Diving" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>RED SEA</span>
@@ -315,7 +332,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Alexandria Mediterranean" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Alexandria Mediterranean" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>ALEXANDRIA</span>
@@ -352,7 +371,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1587486913048-54c2b2c7093c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Siwa Oasis" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1587486913048-54c2b2c7093c?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1587486913048-54c2b2c7093c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Siwa Oasis" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1587486913048-54c2b2c7093c?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>SIWA OASIS</span>
@@ -389,7 +410,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Luxor Night" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Luxor Night" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>LUXOR</span>
@@ -426,7 +449,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Hurghada Red Sea" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Hurghada Red Sea" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>HURGHADA</span>
@@ -463,7 +488,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1601224744670-41e757c59221?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Desert Safari" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1601224744670-41e757c59221?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1601224744670-41e757c59221?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Desert Safari" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1601224744670-41e757c59221?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>WESTERN DESERT</span>
@@ -500,7 +527,9 @@
                     <div class="swiper-slide">
                         <div class="package-card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1539755530862-00f623c00f37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90" alt="Cairo City Lights" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1539755530862-00f623c00f37?w=800&h=400&fit=crop'">
+                                <img src="https://images.unsplash.com/photo-1539755530862-00f623c00f37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90"
+                                    alt="Cairo City Lights" loading="lazy"
+                                    onerror="this.src='https://images.unsplash.com/photo-1539755530862-00f623c00f37?w=800&h=400&fit=crop'">
                                 <div class="location-badge">
                                     <span class="pin-icon">📍</span>
                                     <span>CAIRO</span>
@@ -551,7 +580,8 @@
                 <!-- Left Column - Image -->
                 <div class="cruises-image-col scroll-animate" data-animation="fadeInLeft">
                     <div class="cruises-image-container">
-                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=90" alt="Nile River Cruise" class="cruises-main-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=90"
+                            alt="Nile River Cruise" class="cruises-main-image">
                         <div class="cruises-badge">
                             <span class="badge-icon">⚓</span>
                             <div class="badge-text">
@@ -572,7 +602,9 @@
                         Royal Nile River <span class="highlight">Cruises</span>
                     </h2>
                     <p class="cruises-description">
-                        Enjoy a magical journey aboard the most luxurious Nile ships, where ultimate comfort meets the magic of Pharaonic history. From Luxor to Aswan, witness the greatest temples and monuments while enjoying top-notch services.
+                        Enjoy a magical journey aboard the most luxurious Nile ships, where ultimate comfort meets the
+                        magic of Pharaonic history. From Luxor to Aswan, witness the greatest temples and monuments
+                        while enjoying top-notch services.
                     </p>
 
                     <!-- Feature Cards Grid -->
@@ -638,7 +670,8 @@
                     Explore the <span class="highlight">Red Sea</span>
                 </h2>
                 <p class="redsea-description">
-                    Dive into a magical world of colorful coral reefs and incredible marine life. Enjoy unforgettable diving experiences in crystal-clear waters along Egypt's Red Sea coast.
+                    Dive into a magical world of colorful coral reefs and incredible marine life. Enjoy unforgettable
+                    diving experiences in crystal-clear waters along Egypt's Red Sea coast.
                 </p>
             </div>
 
@@ -790,16 +823,9 @@
             <div class="video-modal-body">
                 <h3 class="video-modal-title" id="desertVideoTitle">Egyptian Desert Safari</h3>
                 <div class="video-modal-frame-wrapper">
-                    <iframe
-                        id="desertVideoFrame"
-                        src=""
-                        title="Egyptian Desert Safari"
-                        frameborder="0"
+                    <iframe id="desertVideoFrame" src="" title="Egyptian Desert Safari" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                        loading="lazy"
-                    ></iframe>
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -840,7 +866,7 @@
                             <span>What’s included in your tour packages?</span>
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
-                            <div class="faq-answer">
+                        <div class="faq-answer">
                             <p>
                                 Most packages include accommodation, daily breakfast, private or small‑group tours with
                                 licensed Egyptologist guides, entrance fees to mentioned sites, domestic flights or
@@ -893,7 +919,8 @@
                     What Our <span class="highlight">Customers Say</span>
                 </h2>
                 <p class="section-description">
-                    We are proud of the trust of more than 50,000 travellers who chose us to design their dream trip to Egypt.
+                    We are proud of the trust of more than 50,000 travellers who chose us to design their dream trip to
+                    Egypt.
                 </p>
             </div>
 
@@ -911,7 +938,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "Professional service, beautiful Nile views, and delicious food. The perfect holiday for me and my partner!"
+                                "Professional service, beautiful Nile views, and delicious food. The perfect holiday for
+                                me and my partner!"
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">E</div>
@@ -935,7 +963,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "Diving in the Red Sea was life-changing. Highly recommend their adventure packages for anyone visiting Egypt."
+                                "Diving in the Red Sea was life-changing. Highly recommend their adventure packages for
+                                anyone visiting Egypt."
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">J</div>
@@ -959,7 +988,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "Everything was perfectly organized from airport pick-up to private tours at the pyramids. Highly recommended!"
+                                "Everything was perfectly organized from airport pick-up to private tours at the
+                                pyramids. Highly recommended!"
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">D</div>
@@ -983,7 +1013,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "Our family cruise on the Nile was unforgettable. The kids loved it and the guides were incredibly helpful."
+                                "Our family cruise on the Nile was unforgettable. The kids loved it and the guides were
+                                incredibly helpful."
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">A</div>
@@ -1007,7 +1038,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "As an Egyptian, I was impressed by how smooth everything was. Great service and amazing local knowledge."
+                                "As an Egyptian, I was impressed by how smooth everything was. Great service and amazing
+                                local knowledge."
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">Y</div>
@@ -1031,7 +1063,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "From the Red Sea to the desert, every part of our itinerary felt carefully designed and truly special."
+                                "From the Red Sea to the desert, every part of our itinerary felt carefully designed and
+                                truly special."
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">S</div>
@@ -1055,7 +1088,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "The boutique hotels they chose for us in Cairo and Aswan were absolutely stunning and very comfortable."
+                                "The boutique hotels they chose for us in Cairo and Aswan were absolutely stunning and
+                                very comfortable."
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">M</div>
@@ -1079,7 +1113,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "Our kids still talk about the Nile cruise and sound & light show at Karnak. Truly a family trip to remember."
+                                "Our kids still talk about the Nile cruise and sound & light show at Karnak. Truly a
+                                family trip to remember."
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">K</div>
@@ -1103,7 +1138,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "Excellent communication from the team, flexible changes, and safe drivers everywhere we went."
+                                "Excellent communication from the team, flexible changes, and safe drivers everywhere we
+                                went."
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">L</div>
@@ -1127,7 +1163,8 @@
                                 </div>
                             </div>
                             <p class="testimonial-text">
-                                "Best agency we have ever booked with. They made Egypt feel both adventurous and incredibly easy."
+                                "Best agency we have ever booked with. They made Egypt feel both adventurous and
+                                incredibly easy."
                             </p>
                             <div class="testimonial-footer">
                                 <div class="testimonial-avatar">N</div>
@@ -1150,7 +1187,8 @@
         <div class="container">
             <div class="contact-grid contact-grid--reviews">
                 <!-- Trustpilot -->
-                <a href="https://www.trustpilot.com" target="_blank" rel="noopener" class="review-trust-card scroll-animate" data-animation="fadeInUp" data-delay="100">
+                <a href="https://www.trustpilot.com" target="_blank" rel="noopener"
+                    class="review-trust-card scroll-animate" data-animation="fadeInUp" data-delay="100">
                     <div class="review-trust-icon review-trust-icon--trustpilot">
                         <img src="assets/Trustpilot.png" alt="Trustpilot" class="review-trust-img">
                     </div>
@@ -1170,7 +1208,8 @@
                 </a>
 
                 <!-- Google -->
-                <a href="https://www.google.com/search?q=travel+egypt+tours" target="_blank" rel="noopener" class="review-trust-card scroll-animate" data-animation="fadeInUp" data-delay="200">
+                <a href="https://www.google.com/search?q=travel+egypt+tours" target="_blank" rel="noopener"
+                    class="review-trust-card scroll-animate" data-animation="fadeInUp" data-delay="200">
                     <div class="review-trust-icon review-trust-icon--google">
                         <i class="fa-brands fa-google"></i>
                     </div>
@@ -1190,7 +1229,8 @@
                 </a>
 
                 <!-- TripAdvisor -->
-                <a href="https://www.tripadvisor.com" target="_blank" rel="noopener" class="review-trust-card scroll-animate" data-animation="fadeInUp" data-delay="300">
+                <a href="https://www.tripadvisor.com" target="_blank" rel="noopener"
+                    class="review-trust-card scroll-animate" data-animation="fadeInUp" data-delay="300">
                     <div class="review-trust-icon review-trust-icon--tripadvisor">
                         <img src="assets/TripAdvisor.jpg" alt="TripAdvisor" class="review-trust-img">
                     </div>
@@ -1245,11 +1285,14 @@
                         <img src="assets/images/logo_wh.png" alt="Travel Egypt" class="footer-logo-img">
                     </div>
                     <p class="footer-description">
-                        We offer you the best travel experiences in Egypt with trips designed to discover the wonders of ancient and modern Egypt.
+                        We offer you the best travel experiences in Egypt with trips designed to discover the wonders of
+                        ancient and modern Egypt.
                     </p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -1289,7 +1332,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 <a href="#" class="text-warning text-decoration-none">Travel Egypt</a>. All rights reserved.</p>
+                <p>&copy; 2026 <a href="#" class="text-warning text-decoration-none">Travel Egypt</a>. All rights
+                    reserved.</p>
             </div>
         </div>
     </footer>
@@ -1298,4 +1342,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
