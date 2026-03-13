@@ -691,6 +691,20 @@ html {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
+.btn-brown {
+    background: #C47A2C;
+    border-color: #C47A2C;
+    color: #fff;
+    font-weight: 700;
+}
+
+.btn-brown:hover {
+    background: #A8641F;
+    border-color: #A8641F;
+    color: #fff;
+    box-shadow: 0 10px 28px rgba(168, 100, 31, 0.5);
+}
+
 .btn-secondary {
     background: transparent;
     color: #ffffff;
@@ -1431,7 +1445,7 @@ html {
 
 /* Red Sea Experience Section */
 .redsea-section {
-    background-image: url('../red-sea.jpg');
+    background-image: url('../images/red-sea.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -4182,7 +4196,7 @@ body.modal-open {
     align-items: center;
     justify-content: center;
     background: #000;
-    background-image: url('../about.webp');
+    background-image: url('../images/about.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
